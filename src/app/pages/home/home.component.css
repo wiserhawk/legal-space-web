@@ -1,0 +1,60 @@
+.main-banner {
+	width: 100%;
+	height: 35em;
+	background: linear-gradient(to right, rgba(204, 61, 17, 0.42), rgba(13, 212, 146, 0.42)), url("../../../assets/images/legal-space-icon.png") no-repeat top center;
+	padding-top: 150px;
+}
+
+h3 {
+    padding-top: 4em;
+	margin: 1em auto 0 auto;
+	font-size: 2em; 
+	font-weight: bold;
+	text-align: center;
+    color: #ffffff;
+}
+h4 {
+	margin: 20px auto;
+	font-size:  1.2em; 
+    font-weight: bold;
+	text-align: center;
+	color: #333;
+}
+
+h3, h4, button {
+	-webkit-transition: opacity 0.5s linear, margin-top 0.5s linear; /* Safari */
+	transition: opacity 0.5s linear, margin-top 0.5s linear;
+}
+
+button {
+	border: 0.1rem solid #eee;
+	background-color: #f81056;
+	color: #fff;
+	border-radius: .3em;
+	padding: 0.5em 1em;
+	box-shadow: 5px 5px #aaa;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+button:hover {
+	background-color: #b6063b;
+}
+
+.section-header {
+    width: 100%;
+    height: auto;
+}
+
+.section-header h3 {
+    padding-top: 0;
+    color: #333;
+}
+
+
+
