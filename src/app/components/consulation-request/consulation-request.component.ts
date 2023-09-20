@@ -14,16 +14,14 @@ export class ConsulationRequestComponent {
   public errPhone: boolean = false;
   public errEmail: boolean = false;
   public errMessage: boolean = false;
-  public errMain: boolean = false;
+  public success: boolean = false;
   public errMsgName!: string;
   public errMsgPhone!: string;
   public errMsgEmail!: string;
   public errMsgMessage!: string;
-  public errMsgMain!: string;
+  public sucessMessage!: string;
   private emailjs_pub_key = 'EDA4gIx0bz7Y03Ek7';
   
-  @ViewChild('toast')  toast!: ElementRef;
-
   public constructor() {}
 
   async onSubmit() {
@@ -37,9 +35,8 @@ export class ConsulationRequestComponent {
       //   phone: this.model.phone,
       //   email: this.model.email,
       // });
-
-      //alert('Your request has been successfully sumbitted!')
-      this.toast.nativeElement.style.display="block";
+      this.sucessMessage = "Your request has been successfully sumbitted! We will contact you shortly.";
+      this.success = true;
       //Reset model
       this.model = {};
     }
@@ -89,12 +86,12 @@ export class ConsulationRequestComponent {
     this.errPhone = false;
     this.errEmail = false;
     this.errMessage = false;
-    this.errMain = false;
+    this.success = false;
     this.errMsgName = '';
     this.errMsgPhone = '';
     this.errMsgEmail = '';
     this.errMsgMessage = '';
-    this.errMsgMain = '';
+    this.sucessMessage = '';
   }
 
   private numberOnly(value: any): boolean {

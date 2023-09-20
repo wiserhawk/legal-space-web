@@ -1,5 +1,5 @@
 .footer-container {
-	background:url("../../../assets/images/border.png") repeat-x 0px 0px #071029;
+	background:url("../../../assets/images/border.png") repeat-x 0px 0px #083355;
 	float:left;
 	width:100%;
 	height:auto;
@@ -13,7 +13,7 @@ a {
 }
 
 .about_us {
-	padding: 3em 2em;
+	padding: 1em 2em;
 	width: 40%;
 	float:left;
 	height: auto;
@@ -28,18 +28,26 @@ a {
 	text-decoration: none;
     font-size: 1.5em;
     font-weight: bold;
-    color: #0da584;
+    color: #08acac;
+}
+
+.about_us p {
+	padding-top: 1em;
 }
 
 .quick_link, .footer_right {
-	width:30%;
-	float:left;
+	width: 25%;
+	float: left;
     height: auto;
+}
+
+.footer_right {
+	width: 35%;
 }
 
 .quick_link h3, .footer_right h3 {
 	font-size:1.2em;
-	color: #0da584;
+	color: #08acac;
 	margin: 30px 30px 20px 40px;
 }
 
@@ -56,13 +64,13 @@ a {
 }
 
 .footer-copyright-container {
-	background: url("../../../assets/images/border.png") repeat-x 0px 0px #68747d;
+	background: url("../../../assets/images/border.png") repeat-x 0px 0px #071029;
 	width:100%;
 	float:left;
 	height: 1em;
 	text-align:center;
 	padding:30px 0 50px 0;
-	color: #0da584;
+	color: #08acac;
 
 }
 

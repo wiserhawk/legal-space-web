@@ -1,0 +1,32 @@
+.section-header {
+    margin-top: 4em;
+    padding: 2em 0 2em 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.section-header h3 {
+    padding-top: 0;
+    color: #08acac;
+}
+
+.workflow-section-panel {
+    width: 100%;
+    padding: 2em 3em;
+    font-size: 1.4em;
+    color: #333;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.workflow {
+    margin: 0 auto;
+    width: 20em;
+}
+
+.workflow label {
+    font-size: 2em;
+    color: #08acac;
+}
+

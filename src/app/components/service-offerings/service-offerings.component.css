@@ -19,7 +19,7 @@
 .s-icon {
     font-size: 1.4em;
     font-weight: bold;
-    color: #0da584;
+    color: #08acac;
 }
 
 .s-card  p {
@@ -34,6 +34,11 @@ button {
     font-weight: bold;
 	padding: 0.5em 1em;
 	box-shadow: 5px 5px #ddd;
+}
+
+button a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 button:hover {

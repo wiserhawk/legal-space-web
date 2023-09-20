@@ -13,11 +13,11 @@
 }
 
 input {
-	border: #0da584 solid 0.1rem;
+	border: #08acac solid 0.1rem;
 }
 
 label {
-	color: #0da584;
+	color: #08acac;
 	font-weight: bold;
 }
 
@@ -42,12 +42,17 @@ label {
 	width: 100%;
 }
 
-.error-holder {
+.error-holder, .success-holder {
     padding: 0.2em 0;
 	width: 100%;
     font-size: 1em;
 	font-weight: bold;
 	color: #c20c27;
+}
+
+.success-holder {
+	color: #069150;
+	font-size: 1.2em;
 }
 
 .action-btn-holder {
@@ -59,7 +64,7 @@ label {
 	margin: 10px 0 10px 0;
 	padding:10px 20px 10px 20px;
 	text-align: center;
-	background-color: #0da584;
+	background-color: #08acac;
 	color:#fff;
 	font-size: 1em;
 	font-weight: bold;
