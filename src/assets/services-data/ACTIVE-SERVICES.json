@@ -1,6 +1,7 @@
 
 {
     "activeServices": [
-        "criminal-law"
+        "criminal-law",
+        "civil-law"
     ]
 }

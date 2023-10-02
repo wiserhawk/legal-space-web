@@ -12,13 +12,11 @@ export class FilesService {
 
 
   public getServiceModel(filePath: string): Observable<ServiceModel> {
-
-    //let model: ServiceModel;
     return this.http.get<ServiceModel>(filePath);
-    //return model;
   }
 
   public getActiveServices(filePath: string): Observable<ActiveServices> {
     return this.http.get<ActiveServices>(filePath);
   }
+  
 }

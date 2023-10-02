@@ -1,7 +1,7 @@
 {
-    "fileName": "criminal-law",
-    "title": "Criminal Law",
-    "icon": "bi bi-person-bounding-box",
+    "fileName": "civil-law",
+    "title": "Civil Law",
+    "icon": "bi bi-people-fill",
     "description":"The body of law which relates to crime is called Criminal law. The wrongful actions which are included in criminal law are threatening, harmful, or otherwise endangering to the property, health, safety, and moral welfare of people.",
     "content": [
         "<b><u>Criminal law:</u></b> Deals with criminal wrongs such as theft, murder, sexual abuse, and threatening. Criminal law also handles trials for convicted offenders.",

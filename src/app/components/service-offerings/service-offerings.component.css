@@ -17,9 +17,10 @@
     #border: 1px solid #555;
 }
 .s-icon {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
     color: #08acac;
+    text-transform: uppercase;
 }
 
 .s-card  p {

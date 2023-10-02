@@ -1,43 +1,7 @@
 <div class="so-main">
-    <div class ="s-card">
-        <div class="s-icon"><i class="bi bi-briefcase" style="font-size: 2em"></i> CORPORATE LAW</div>
-        <p>chunks as necessary, making this the first true generator on the Internet. It uses a dictionary</p>
-        <button><a href="/service">Read More</a></button>
-    </div>
-
-    <div class ="s-card">
-        <div class="s-icon"><i class="bi bi-people" style="font-size: 2em"></i> MATRIMONIAL LAW</div>
-        <p>chunks as necessary, making this the first true generator on the Internet. It uses a dictionary. 
-            chunks as necessary, making this the first true generator on the Internet. It uses a dictionary
-        </p>
-        <button><a href="/service">Read More</a></button>
-    </div>
-
-    <div class ="s-card">
-        <div class="s-icon"><i class="bi bi-person-bounding-box" style="font-size: 2em"></i> CRIMINAL LAW</div>
-        <p>chunks as necessary, making this the first true generator on the Internet. It uses a dictionary</p>
-        <button><a href="/service">Read More</a></button>
-    </div>
-
-    <div class ="s-card">
-        <div class="s-icon"><i class="bi bi-people" style="font-size: 2em"></i> MATRIMONIAL LAW</div>
-        <p>chunks as necessary, making this the first true generator on the Internet. It uses a dictionary. 
-            chunks as necessary, making this the first true generator on the Internet. It uses a dictionary
-        </p>
-        <button><a href="/service">Read More</a></button>
-    </div>
-
-    <div class ="s-card">
-        <div class="s-icon"><i class="bi bi-briefcase" style="font-size: 2em"></i> CORPORATE LAW</div>
-        <p>chunks as necessary, making this the first true generator on the Internet. It uses a dictionary</p>
-        <button><a href="/service">Read More</a></button>
-    </div>
-
-    <div class ="s-card">
-        <div class="s-icon"><i class="bi bi-person-bounding-box" style="font-size: 2em"></i> CRIMINAL LAW</div>
-        <p>chunks as necessary, making this the first true generator on the Internet. It uses a dictionary</p>
-        <button><a href="/service">Read More</a></button>
-    </div>
-
-
+    <div class ="s-card" *ngFor="let srv of services">
+        <div class="s-icon"><i class="{{srv.icon}}" style="font-size: 2em"></i> &nbsp; {{srv.title}}</div>
+        <p>{{srv.description}}</p>
+        <button><a href="/service/{{srv.fileName}}">Read More</a></button>
+    </div> 
 </div>
