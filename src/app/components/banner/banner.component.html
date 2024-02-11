@@ -1,0 +1,34 @@
+<div class="main-banner">
+
+    <video class="main-banner" autoplay muted loop controls="controls">
+        <source src="../../../assets/videos/road-trip.mp4" type="video/mp4">
+    </video>
+
+    <div class="card-1 color-1" *ngIf="current == 1">
+        <div class="text-panel">
+            <p class="text">Provied Legal Asistance Across Delhi NCR</p>
+        </div>
+        <div class="action-panel">
+            <button class="btn-1"><a href="/consultation-request">Book Free Legal Consulting</a></button>
+        </div>
+    </div>
+
+    <div class="card-2 color-2" *ngIf="current == 2">
+        <div class="text-panel">
+            <p class="text">Create Legal Documentations Online</p> 
+        </div>
+        <div class="action-panel">
+            <button class="btn-2"><a href="/consultation-request">Book Free Legal Consulting</a></button> 
+        </div>
+    </div>
+
+    <div class="card-3 color-3" *ngIf="current == 3">
+        <div class="text-panel">
+            <p class="text">Free Legal Consultation</p>
+        </div>
+        <div class="action-panel">
+            <button class="btn-3"><a href="/consultation-request">Book Free Legal Consulting</a></button>
+        </div>
+    </div>
+
+</div>

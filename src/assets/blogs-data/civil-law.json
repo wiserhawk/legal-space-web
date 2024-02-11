@@ -1,0 +1,17 @@
+{
+    "fileName": "civil-law",
+    "title": "Civil Law",
+    "icon": "bi bi-people-fill",
+    "description":"The body of law which relates to crime is called Criminal law. The wrongful actions which are included in criminal law are threatening, harmful, or otherwise endangering to the property, health, safety, and moral welfare of people. Deals with criminal wrongs such as theft, murder, sexual abuse, and threatening. Criminal law also handles trials for convicted offenders.",
+    "content": [
+        "<b><u>Criminal law:</u></b> Deals with criminal wrongs such as theft, murder, sexual abuse, and threatening. Criminal law also handles trials for convicted offenders.",
+        "<b><u>White collar crime:</u></b> Non-violent crimes that use deception to conceal other criminal conduct, acquire money, property, or any other gain.",
+        "<b><u>Civil law:</u></b> Deals with disputes between organizations and individuals. Civil law covers areas such as defamation, custody of children, and right to education.",
+        "<b><u>Economic offenses:</u></b> Can be political, social, personal, and economical in nature. The socio-economic condition of the society decides the types and frequency of the offenses.",
+        "<b><u>Statutory criminal offences:</u></b> Examples include drunk driving and consumption of drugs.",
+        "<b><u>Contract killings:</u></b> Involve engaging a professional gang for a monetary consideration. The chance of detection in contract killings is quite low.", 
+        "<b><u>Intellectual property law:</u></b> Intellectual Property (IP) Lawyers handle such cases.",
+        "<b><u>Robbery and dacoity:</u></b> Dacoity is an aggravated form of robbery."
+    ]
+}
+

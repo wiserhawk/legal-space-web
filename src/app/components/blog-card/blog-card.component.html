@@ -1,0 +1,7 @@
+<div class="blogs-main">
+    <div class ="b-card" *ngFor="let blog of blogs">
+        <div class="b-icon">{{blog.title}}</div>
+        <p>{{blog.description}}</p>
+        <button><a href="/blog/{{blog.fileName}}">Read More >></a></button>
+    </div> 
+</div>

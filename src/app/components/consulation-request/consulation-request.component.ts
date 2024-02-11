@@ -28,7 +28,7 @@ export class ConsulationRequestComponent {
     this.clearErrorState();
     if (this.validateInput(this.model)) {
       this.clearErrorState();
-      // emailjs.init(this.emailjs_pub_key);
+      emailjs.init(this.emailjs_pub_key);
       // let res = await emailjs.send("service_98jd1gl","template_zmnon2q",{
       //   name: this.model.name,
       //   message: this.model.message,

@@ -1,0 +1,12 @@
+.blog-container {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    margin: 0 auto;
+    width: 80%;
+    padding: 2em 3em;
+    font-size: 1.3em;
+    background-color: #ffffff;
+}

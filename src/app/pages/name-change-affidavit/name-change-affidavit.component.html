@@ -1,0 +1,113 @@
+<page-title [title]="'NAME CHANGE AFFIDAVIT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Personal Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+
+                    <div class="info-box">
+                        <i class="bi bi-info-circle-fill warn" >I am changing my name.</i>
+                    </div>
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="oldName" name="oldName" [(ngModel)]="model.oldName" #oldName="ngModel"/>
+                        <label for="floatingInput">From (Old Name)*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('oldName')"><i class="bi bi-x-circle"></i> Enter your old name.</div>                  
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="newName" name="newName" [(ngModel)]="model.newName" #newName="ngModel"/>
+                        <label for="floatingInput">To (New Name)*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('newName')"><i class="bi bi-x-circle"></i> Enter your new name.</div>                  
+                    </div>
+                    
+                    <label class="cont-label">What is your gender?*</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="gender" name="gender" [(ngModel)]="model.gender" #gender="ngModel">
+                            <mat-chip-option selected>Male</mat-chip-option>
+                            <mat-chip-option color="warn">Female</mat-chip-option>
+                        </mat-chip-listbox>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('gender')"><i class="bi bi-x-circle"></i> Select your gender.</div>
+                    </div>
+                    
+                    <label class="cont-label">What is your date of birth?*</label>
+                        <mat-form-field appearance="fill"> 
+                            <mat-label>(MM/DD/YYYY)</mat-label> 
+                            <input matInput [matDatepicker]="picker" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel"> 
+                            <mat-datepicker-toggle matSuffix [for]="picker"> 
+                              </mat-datepicker-toggle>  
+                            <mat-datepicker #picker></mat-datepicker> 
+                        </mat-form-field>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('dateOfBirth')"><i class="bi bi-x-circle"></i> Select your date of birth.</div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="fatherName" name="fatherName" [(ngModel)]="model.fatherName" #fatherName="ngModel"/>
+                        <label for="floatingInput">Father Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('fatherName')"><i class="bi bi-x-circle"></i> Enter your father name.</div>                  
+                    </div>
+                    
+                    <label class="cont-label">Name of the document?*</label>
+                    <mat-chip-listbox aria-label="document" name="document" [(ngModel)]="model.document" #document="ngModel" >
+                        <mat-chip-option selected>School Certificate</mat-chip-option>
+                        <mat-chip-option color="warn">Aadhaar Card</mat-chip-option>
+                        <mat-chip-option color="accent">PAN Card</mat-chip-option>
+                        <mat-chip-option color="primary">Passport</mat-chip-option>
+                        <mat-chip-option color="warn">Other</mat-chip-option>
+                    </mat-chip-listbox>
+                    <div class="error-holder" *ngIf="error && errorFields.includes('document')"><i class="bi bi-x-circle"></i> Select name of the document.</div>  
+                    
+                    <label class="cont-label">Do you want to change in Passport?*</label>
+                    <mat-chip-listbox aria-label="nameChangeOnPassport" name="nameChangeOnPassport" [(ngModel)]="model.nameChangeOnPassport" #nameChangeOnPassport="ngModel" >
+                        <mat-chip-option selected>Yes (Need to fill Annexure-E)</mat-chip-option>
+                        <mat-chip-option color="warn">No</mat-chip-option>
+                    </mat-chip-listbox>
+                    <div class="error-holder" *ngIf="error && errorFields.includes('nameChangeOnPassport')"><i class="bi bi-x-circle"></i> Select wether you want to change name in passport.</div>                  
+                    
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>

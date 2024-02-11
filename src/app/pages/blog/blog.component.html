@@ -1,0 +1,7 @@
+<div class="blog-container">
+    <page-title [title]=model.title ></page-title>
+    <div class="blog-content">
+        <p *ngFor="let paragraph of model.content" [innerHTML]="paragraph"></p>
+    </div>
+</div>
+

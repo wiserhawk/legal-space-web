@@ -1,24 +1,28 @@
 .main-banner {
 	width: 100%;
-	height: 35em;
-	background: linear-gradient(to right, rgba(204, 61, 17, 0.42), rgba(13, 212, 146, 0.42)), url("../../../assets/images/legal-space-icon.png") no-repeat top center;
-	padding-top: 150px;
+	height: 40em;
+	#background: linear-gradient(to right, rgba(243, 84, 5, 0.322), rgba(1, 232, 155, 0.312)),  url("../../../assets/images/plant-bg1.jpg") repeat top center;
+	background: url("../../../assets/images/bg1.jpg") repeat center;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: #46b5cf;
 }
 
 h3 {
-    padding-top: 4em;
+    padding-top: 3em;
 	margin: 1em auto 0 auto;
-	font-size: 2em; 
+	font-size: 1.8em; 
 	font-weight: bold;
 	text-align: center;
-    color: #ffffff;
 }
 h4 {
-	margin: 20px auto;
+	margin: 1em auto;
 	font-size:  1.2em; 
     font-weight: bold;
 	text-align: center;
-	color: #333;
+	#color: #333;
 }
 
 h3, h4, button {
@@ -27,12 +31,12 @@ h3, h4, button {
 }
 
 button {
-	border: 0.1rem solid #eee;
-	background-color: #f81056;
+	margin: 1em;
+	border: none;
+	background-color: #FF6766;
 	color: #fff;
 	border-radius: .3em;
 	padding: 0.5em 1em;
-	box-shadow: 5px 5px #aaa;
 }
 
 a {
@@ -43,18 +47,119 @@ a {
 }
 
 button:hover {
-	background-color: #b6063b;
+	background-color: #dc2e62;
 }
 
 .section-header {
     width: 100%;
-    height: auto;
+    #height: auto;
+	background-color: #000;
+	float: left;
 }
 
-.section-header h3 {
-    padding-top: 0;
-    color: #333;
+.section-header div {
+	width: 100%;
+	height: auto;
+    padding: 1em 0;
+    color: #fff;
+	font-size: 1.5em;
+	text-align: center;
 }
 
 
 
+/* Start typing animation  */
+  .typing-container {
+	width: 100%;
+	#display: flex;
+	position: absolute;
+	top: 20em;
+	text-align: center;
+	
+  }
+  .static-txt {
+	color:#fff;
+	font-size: 1.3em;
+	font-family: 'Fira Code', monospace;
+	font-weight: bold;
+  }
+
+  @keyframes cursor {
+	from, to {
+	  border-color: transparent;
+	}
+	50% {
+	  border-color: black;
+	}
+  }
+  @keyframes typing {
+	from {
+	  width: 100%;
+	}
+	90%, to {
+	  width: 0;
+	}
+  }
+  @keyframes slide {
+	33.3333333333% {
+	  font-size: 1.5rem;
+	  letter-spacing: 3px;
+	}
+	to {
+	  font-size: 0;
+	  letter-spacing: 0;
+	}
+  }
+  .typing-slider {
+	margin: 1em 0 0 0;
+	font-family: Consolas, monospace;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+  }
+  
+  .typing-slider p {
+	position: relative;
+	display: inline;
+	color: #fff;
+	font-size: 0;
+	text-transform: uppercase;
+	letter-spacing: 0;
+	animation: slide 15s step-start infinite;
+  }
+  
+  .typing-slider p::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-left: 3px solid black;
+	background-color: #46b5cf;
+	animation: typing 5s infinite, cursor 1s infinite;
+  }
+  
+  .typing-slider p:nth-child(1) {
+	animation-delay: 0s;
+  }
+  .typing-slider p:nth-child(1)::after {
+	animation-delay: 0s;
+	animation-timing-function: steps(16), step-end;
+  }
+  
+  .typing-slider p:nth-child(2) {
+	animation-delay: 5s;
+  }
+  .typing-slider p:nth-child(2)::after {
+	animation-delay: 5s;
+	animation-timing-function: steps(23), step-end;
+  }
+  
+  .typing-slider p:nth-child(3) {
+	animation-delay: 10s;
+  }
+  .typing-slider p:nth-child(3)::after {
+	animation-delay: 10s;
+	animation-timing-function: steps(12), step-end;
+  }
+/* End typing animation  */

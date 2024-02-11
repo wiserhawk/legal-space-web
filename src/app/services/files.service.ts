@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ActiveServices, ServiceModel } from '../models/common.model';
+import { ActiveBlogs, BlogModel } from '../models/common.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,12 @@ export class FilesService {
   constructor(private http: HttpClient) { }
 
 
-  public getServiceModel(filePath: string): Observable<ServiceModel> {
-    return this.http.get<ServiceModel>(filePath);
+  public getBlogModel(filePath: string): Observable<BlogModel> {
+    return this.http.get<BlogModel>(filePath);
   }
 
-  public getActiveServices(filePath: string): Observable<ActiveServices> {
-    return this.http.get<ActiveServices>(filePath);
+  public getActiveBlogs(filePath: string): Observable<ActiveBlogs> {
+    return this.http.get<ActiveBlogs>(filePath);
   }
   
 }

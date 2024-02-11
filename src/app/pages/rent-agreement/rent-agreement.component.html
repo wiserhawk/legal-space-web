@@ -1,0 +1,176 @@
+<page-title [title]="'RENTAL AGREEMENT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Agreement Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+
+                    <label class="cont-label">What is type of rental property ?</label>
+                    <mat-chip-listbox aria-label="rentalType" name="rentalType" [(ngModel)]="model.rentalType" #rentalType="ngModel" >
+                        <mat-chip-option selected>Residential Property</mat-chip-option>
+                        <mat-chip-option color="warn">Commercial Property</mat-chip-option>
+                    </mat-chip-listbox>
+                    <div class="error-holder" *ngIf="error && errorFields.includes('rentalType')"><i class="bi bi-x-circle"></i> Select type of rental property.</div>
+
+                    <label class="cont-label">What is type of agreement duration?</label>
+                    <mat-chip-listbox aria-label="durationType" name="durationType" [(ngModel)]="model.durationType" #durationType="ngModel">
+                        <mat-chip-option selected>Monthly Rental</mat-chip-option>
+                        <mat-chip-option color="warn">Long Term Lease</mat-chip-option>
+                      </mat-chip-listbox>
+                      <div class="error-holder" *ngIf="error && errorFields.includes('durationType')"><i class="bi bi-x-circle"></i> Select type of agreement duration.</div>
+                    
+                    <label class="cont-label">What is type of property ?</label>
+                    <mat-chip-listbox aria-label="propertyType" name="propertyType" [(ngModel)]="model.propertyType" #propertyType="ngModel">
+                        <mat-chip-option selected>House</mat-chip-option>
+                        <mat-chip-option color="warn">Appartment</mat-chip-option>
+                        <mat-chip-option color="accent">Room</mat-chip-option>
+                      </mat-chip-listbox>
+                      <div class="error-holder" *ngIf="error && errorFields.includes('propertyType')"><i class="bi bi-x-circle"></i> Select type of property.</div>
+            
+                    <label class="cont-label">Who are you ?</label>
+                    <mat-chip-listbox aria-label="whoAreYou" name="whoAreYou" [(ngModel)]="model.whoAreYou" #whoAreYou="ngModel">
+                        <mat-chip-option selected>Landlord</mat-chip-option>
+                        <mat-chip-option color="warn">Tenant</mat-chip-option>
+                        <mat-chip-option color="accent">Agent</mat-chip-option>
+                      </mat-chip-listbox>
+                      <div class="error-holder" *ngIf="error && errorFields.includes('whoAreYou')"><i class="bi bi-x-circle"></i> Select who are you.</div>
+
+                    <label class="cont-label">What is start date of agreement ?</label>
+                    <mat-form-field appearance="fill"> 
+                        <mat-label>(MM/DD/YYYY)</mat-label> 
+                        <input matInput [matDatepicker]="picker" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel"> 
+                        <mat-datepicker-toggle matSuffix [for]="picker"> 
+                          </mat-datepicker-toggle>  
+                        <mat-datepicker #picker></mat-datepicker> 
+                    </mat-form-field>
+                    <div class="error-holder" *ngIf="error && errorFields.includes('startDate')"><i class="bi bi-x-circle"></i> Select date of agreement.</div>
+                    
+                    <label class="cont-label">What is duration of agreement ?</label>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingInput" min="1" placeholder="duration" name="duration" [(ngModel)]="model.duration" #name="ngModel" />
+                        <label for="floatingInput">Duration (Months)*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('duration')"><i class="bi bi-x-circle"></i> Select duration of agreement.</div>
+                    </div>
+                    
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Landlord Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="landlordName" name="landlordName" [(ngModel)]="model.landlordName" #landlordName="ngModel"/>
+                        <label for="floatingInput">Landloard Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('landlordName')"><i class="bi bi-x-circle"></i> Enter landlord name.</div>                  
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="landlordAddress" name="landlordAddress" [(ngModel)]="model.landlordAddress" #landlordAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Landlord Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('landlordAddress')"><i class="bi bi-x-circle"></i> Enter landlord address.</div>
+                    </div>
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Third Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">3</span><label> Tenant Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 3"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-3" *ngIf="currentStep == 3"> 
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="tenantName" name="tenantName" [(ngModel)]="model.tenantName" #tenantName="ngModel"/>
+                        <label for="floatingInput">Tenant Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('tenantName')"><i class="bi bi-x-circle"></i> Enter tenant name.</div>                   
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="tenantAddress" name="tenantAddress" [(ngModel)]="model.tenantAddress" #tenantAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Tenant Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('tenantAddress')"><i class="bi bi-x-circle"></i> Enter tenant address.</div>
+                    </div>
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Fourth Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">4</span><label> Property Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 4"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-4" *ngIf="currentStep == 4"> 
+                    
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="propertyAddress" name="propertyAddress" [(ngModel)]="model.propertyAddress" #propertyAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Property Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('propertyAddress')"><i class="bi bi-x-circle"></i> Enter property address.</div>
+                    </div>
+                    <div class="form-floating mb-3"> 
+                        <input type="number" class="form-control" id="floatingInput"  placeholder="propertyRent" name="propertyRent" [(ngModel)]="model.propertyRent" #propertyRent="ngModel"/>
+                        <label for="floatingInput">Property Rent*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('propertyRent')"><i class="bi bi-x-circle"></i> Enter rent of property.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Fifth Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">5</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 5"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-5" *ngIf="currentStep == 5"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="additinalTermsConditions" name="additinalTermsConditions" [(ngModel)]="model.additinalTermsConditions" #additinalTermsConditions="ngModel"></textarea>
+                        <label for="floatingTextarea2">Additinal Terms & Conditions, You Want to Add (Optional)</label>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>

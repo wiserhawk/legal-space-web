@@ -1,0 +1,82 @@
+.documentation-serivces-container {
+    margin-top: 1em;
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    padding: 1em;
+    float: left;
+}
+
+.box {
+  margin: 1em;
+  width: 15em;
+  height: 22em;
+  float: left;
+  border-radius: 10px;
+}
+
+.box-1 { background-color: #f89a45; }
+.box-2 { background-color: #e87161; }
+.box-3 { background-color: #769094; }
+.box-4 { background-color: #46b5cf; }
+.box-5 { background-color: #06a178; }
+.box-6 { background-color: #be3bb8; }
+.box-7 { background-color: #588db8; }
+.box-8 { background-color: #ea3e39; }
+
+.box label {
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.hr {
+  width: 30%;
+  margin: 0 auto;
+  color: #fff;
+  border: 1px solid;
+  opacity: 1;
+}
+
+.circle {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.links-container {
+width: 100%;
+height: auto;
+padding: .8em 1em;
+text-align: center;
+}
+
+.button {
+margin: 5px;
+padding: 5px 10px;
+border: none; 
+border-radius: 30em;
+background-color: #FFFFFF;
+}
+
+.button a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-1 a { color: #c38938;}
+.button-2 a { color: #b3584c; }
+.button-3 a { color: #4e6569; }
+.button-4 a { color: #377988; }
+.button-5 a { color: #088665; }
+.button-6 a { color: #970290; }
+.button-7 a { color: #3485b1; }
+.button-8 a { color: #be3f08; }
+
+.button:hover { background-color: #DDDDDD }

@@ -1,0 +1,57 @@
+.blogs-main {
+    padding: 2em 1em;
+    width: 100%;
+    float: left;
+    color: #333;
+    background-color: #fff;
+}
+
+.b-card {
+    margin: 1em;
+    padding: 2em;
+    float: left;
+    color: #555;
+    width: 20em;
+    height: auto;
+    border-radius: 0.5em;
+    background-color: #EEEEEE;
+    text-align: justify;
+}
+.b-icon {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #08acac;
+    text-transform: uppercase;
+}
+
+.b-card  p {
+    margin-top: 1em;
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.circle {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+button {
+	border: 0.1rem solid #eee;
+	background-color: #f81056;
+	color: #fff;
+	border-radius: .3em;
+    font-weight: bold;
+	padding: 0.5em 1em;
+}
+
+button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #b6063b;
+}

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { map } from 'rxjs';
 import { FilesService } from 'src/app/services/files.service';
-import { ActiveServices, ServiceModel } from '../../models/common.model';
+import { ActiveBlogs, BlogModel } from '../../models/common.model';
 
 @Component({
   selector: 'menu',
@@ -12,24 +12,24 @@ import { ActiveServices, ServiceModel } from '../../models/common.model';
 export class MenuComponent {
 
   activeServices!: string[]
-  serviceModels: ServiceModel[] = [];
+  blogModels: BlogModel[] = [];
 
-  private dirPath: string = "/assets/services-data/";
+  private dirPath: string = "/assets/blogs-data/";
   
 
   public constructor(private fileService: FilesService) {}
 
   ngOnInit() {
-    const filePath = this.dirPath + "ACTIVE-SERVICES.json";
-    this.fileService.getActiveServices(filePath).pipe(
-      map(srv => {
-        return srv.activeServices;
+    const filePath = this.dirPath + "ACTIVE-BLOGS.json";
+    this.fileService.getActiveBlogs(filePath).pipe(
+      map(blog => {
+        return blog.activeBlogs;
       })
-    ).subscribe(services => {
-      services.forEach (val => {
-        let serviceFilePath = this.dirPath + val + '.json';
-        this.fileService.getServiceModel(serviceFilePath).subscribe(srvModel => {
-          this.serviceModels.push(srvModel);
+    ).subscribe(blogs => {
+      blogs.forEach (val => {
+        let blogFilePath = this.dirPath + val + '.json';
+        this.fileService.getBlogModel(blogFilePath).subscribe(blog => {
+          this.blogModels.push(blog);
         });
       })
     });

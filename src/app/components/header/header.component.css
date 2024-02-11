@@ -12,14 +12,14 @@
 
 .nav-icon{
 	float: left;
-	padding: 0.8em;
+	padding: 0.8em 0 0.8em 0.8em;
     cursor: pointer;
     color: #08acac;
 }
 
 .logo{
 	float:left;
-	padding: 0.2em;
+	padding: 0.3em 0;
 }
 .logo img{
 	display:inline-block;
@@ -27,10 +27,10 @@
 
 .logo a {
 	text-decoration: none;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 1.6em;
-    font-weight: bold;
-    color:#08acac;
+	font-family: cursive;
+	font-size: 1.5em;
+    font-weight:bolder;
+    color: #08acac;
 }
 .right-top-panel {
 	float: right;
@@ -43,20 +43,7 @@
 .right-top-panel ul li {
 	list-style: none;
 	float: left;
-	padding: 0.3em;
-}
-.right-top-panel ul li:hover {
-	background-color: #eee;
-	cursor: pointer;
+	padding: 0.5em;
+	font-size: 1.2em;
 }
 
-span{
-  position: relative;
-  top: -0.9em;
-  padding: .1em .2em;
-  border-radius: 30%;
-  font-size: 0.7em;
-  font-weight:bold;
-  background: red;
-  color: white;
-}

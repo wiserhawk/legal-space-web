@@ -1,11 +1,11 @@
 .form-container {
-	margin: 2em auto;
+	margin: 1em auto;
     padding: 20px;
-	width: 100%   ;
+	width: 100%;
 	height:auto;
 	background: #fff;
-    #border: 1px solid #ccc;
 	border-radius: 5px;
+	float: left;
 }
 .form-container form {
     margin: 0 auto;

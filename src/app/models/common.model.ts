@@ -1,9 +1,8 @@
 export class Common {
 
-    
 }
 
-export interface ServiceModel {
+export interface BlogModel {
     fileName: string
     title: string
     icon: string
@@ -11,8 +10,7 @@ export interface ServiceModel {
     content: string[]
 }
   
-
-export interface ActiveServices {
-    activeServices: string[]
+export interface ActiveBlogs {
+    activeBlogs: string[]
 }
   
