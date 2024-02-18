@@ -1,0 +1,161 @@
+<page-title [title]="'REVOCATION OF POWER OF ATTORNEY'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Power of Attorney Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+
+                    <label class="cont-label">What would be the date to revoke the Power of Attorney?</label>
+                    <mat-form-field appearance="fill"> 
+                        <mat-label>(MM/DD/YYYY)</mat-label> 
+                        <input matInput [matDatepicker]="dateToRevoke" name="dateToRevokePOA" [(ngModel)]="model.dateToRevokePOA" #dateToRevokePOA="ngModel"> 
+                        <mat-datepicker-toggle matSuffix [for]="dateToRevoke"> 
+                          </mat-datepicker-toggle>  
+                        <mat-datepicker #dateToRevoke></mat-datepicker> 
+                    </mat-form-field>
+                    <!-- <div class="error-holder" *ngIf="error && errorFields.includes('dateToRevokePOA')"><i class="bi bi-x-circle"></i> Select the date to revoke the POA.</div> -->
+
+                    <label class="cont-label">What was the purpose of POA?</label>
+                    <mat-chip-listbox aria-label="purpose" name="purpose" [(ngModel)]="model.purpose" #purpose="ngModel" >
+                        <mat-chip-option color="primary">Property</mat-chip-option>
+                        <mat-chip-option color="warn">Banking</mat-chip-option>
+                        <mat-chip-option color="accent">Money & Investment</mat-chip-option>
+                        <mat-chip-option color="primary">Business</mat-chip-option>
+                        <mat-chip-option color="warn">Govt. and Legal Representation</mat-chip-option>
+                        <mat-chip-option color="accent">Other</mat-chip-option>
+                    </mat-chip-listbox>
+                    <!-- <div class="error-holder" *ngIf="error && errorFields.includes('purpose')"><i class="bi bi-x-circle"></i> Select the purpose of power of attorney.</div> -->
+
+                    <label class="cont-label">What is your residential status?</label>
+                    <mat-chip-listbox aria-label="residentialStatus" name="residentialStatus" [(ngModel)]="model.residentialStatus" #residentialStatus="ngModel">
+                        <mat-chip-option selected>Living in India</mat-chip-option>
+                        <mat-chip-option color="warn">Living Outside India</mat-chip-option>
+                        <mat-chip-option color="accent">NRI</mat-chip-option>
+                    </mat-chip-listbox>
+                    <!-- <div class="error-holder" *ngIf="error && errorFields.includes('residentialStatus')"><i class="bi bi-x-circle"></i> Select your residential status.</div> -->
+                    
+                    <label class="cont-label">What type of power of attorney is being revoked or cancelled?</label>
+                    <mat-chip-listbox aria-label="poaType" name="poaType" [(ngModel)]="model.poaType" #poaType="ngModel">
+                        <mat-chip-option color="primary">General</mat-chip-option>
+                        <mat-chip-option color="warn">Special</mat-chip-option>
+                    </mat-chip-listbox>
+
+                    <label class="cont-label">Is power of attorney registered?</label>
+                    <mat-chip-listbox aria-label="isPoaRegistered" name="isPoaRegistered" [(ngModel)]="model.isPoaRegistered" #isPoaRegistered="ngModel">
+                        <mat-chip-option color="primary">Yes</mat-chip-option>
+                        <mat-chip-option color="warn">No</mat-chip-option>
+                    </mat-chip-listbox>
+
+                    <label class="cont-label">What was the start date of POA?*</label>
+                    <mat-form-field appearance="fill"> 
+                        <mat-label>(MM/DD/YYYY)</mat-label> 
+                        <input matInput [matDatepicker]="startDateOfPOA" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel"> 
+                        <mat-datepicker-toggle matSuffix [for]="startDateOfPOA"> 
+                          </mat-datepicker-toggle>  
+                        <mat-datepicker #startDateOfPOA></mat-datepicker> 
+                    </mat-form-field>
+                    <!-- <div class="error-holder" *ngIf="error && errorFields.includes('startDate')"><i class="bi bi-x-circle"></i> Select the start date of POA.</div> -->
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="registrationNumber" name="registrationNumber" [(ngModel)]="model.registrationNumber" #registrationNumber="ngModel"/>
+                        <label for="floatingInput">Registration Numner</label>               
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="bookNumber" name="bookNumber" [(ngModel)]="model.bookNumber" #bookNumber="ngModel"/>
+                        <label for="floatingInput">Book Numner</label>               
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="volumeNumber" name="volumeNumber" [(ngModel)]="model.volumeNumber" #volumeNumber="ngModel"/>
+                        <label for="floatingInput">Volume Numner</label>               
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="pageNumber" name="pageNumber" [(ngModel)]="model.pageNumber" #pageNumber="ngModel"/>
+                        <label for="floatingInput">Page Numner</label>               
+                    </div>
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" min="1" placeholder="placeOfReg" name="placeOfReg" [(ngModel)]="model.placeOfReg" #placeOfReg="ngModel" />
+                        <label for="floatingInput">Place of registration this POA</label>
+                    </div>
+                    
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Principal & Attorney Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+                    <div class="info-box">
+                        <i class="bi bi-info-circle-fill warn" >Principal is a person who granting power to the attorney.</i>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="principalName" name="principalName" [(ngModel)]="model.principalName" #principalName="ngModel"/>
+                        <label for="floatingInput">Principal's Full Name*</label>
+                        <!-- <div class="error-holder" *ngIf="error && errorFields.includes('principalName')"><i class="bi bi-x-circle"></i> Enter name of principal.</div>                   -->
+                    </div>
+                    
+                    <div class="info-box">
+                        <i class="bi bi-info-circle-fill warn" >Attorney is a person whom principal wants to grant the power.</i>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="attorneyName" name="attorneyName" [(ngModel)]="model.attorneyName" #attorneyName="ngModel"/>
+                        <label for="floatingInput">Attorney's Full Name*</label>
+                        <!-- <div class="error-holder" *ngIf="error && errorFields.includes('attorneyName')"><i class="bi bi-x-circle"></i> Enter name of attorney.</div>                   -->
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">3</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 3"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-3" *ngIf="currentStep == 3"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                  
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>

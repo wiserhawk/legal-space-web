@@ -39,17 +39,28 @@ a {
 	width: 25%;
 	float: left;
     height: auto;
+	text-align: left;
 }
 
 .footer_right {
 	width: 35%;
 }
 
-.quick_link h3, .footer_right h3 {
-	font-size:1.2em;
-	color: #08acac;
+.quick_link h1, .footer_right h1 {
+	font-size: 0.9em;	
+	font-weight: bold;
+	color: #ffffff;
 	margin: 30px 30px 20px 40px;
+	text-transform: uppercase;
 }
+
+.hr {
+	width: 6em;
+	margin: 0 0 30px 40px;
+	color: #e96a1b;
+	border: .1rem solid;
+	opacity: 1;
+  }
 
 .list-unstyled {
 	font-size:1em;
@@ -57,10 +68,18 @@ a {
 	list-style: none;
 }
 
+.list-unstyled li {
+	padding: 5px 0 5px 0;	
+}
+
 .list-unstyled li a {
 	margin:5px;
 	text-decoration: none;
 	cursor:pointer;
+}
+
+.list-unstyled li a:hover {
+	color: #08acac;
 }
 
 .footer-copyright-container {

@@ -28,13 +28,17 @@ import { BannerComponent } from './components/banner/banner.component';
 import { DocumentationServicesComponent } from './components/documentation-services/documentation-services.component';
 import { NameChangeAffidavitComponent } from './pages/name-change-affidavit/name-change-affidavit.component';
 import { AfterMarriageNameChangeAffidavitComponent } from './pages/after-marriage-name-change-affidavit/after-marriage-name-change-affidavit.component';
+import { RevocationPowerOfAttorneyComponent } from './pages/revocation-power-of-attorney/revocation-power-of-attorney.component';
+import { AddressProofAffidavitComponent } from './pages/address-proof-affidavit/address-proof-affidavit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: '', component: HomeComponent},
   {path: 'rental-agreement', component: RentAgreementComponent},
   {path: 'power-of-attorney', component: PowerOfAttorneyComponent},
+  {path: 'revoke-power-of-attorney', component: RevocationPowerOfAttorneyComponent},
   {path: 'name-change-affidavit', component: NameChangeAffidavitComponent},
+  {path: 'address-proof-affidavit', component: AddressProofAffidavitComponent},
   {path: 'after-marriage-name-change-affidavit', component: AfterMarriageNameChangeAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
@@ -61,6 +65,8 @@ const routes: Routes = [
     DocumentationServicesComponent,
     NameChangeAffidavitComponent,
     AfterMarriageNameChangeAffidavitComponent,
+    RevocationPowerOfAttorneyComponent,
+    AddressProofAffidavitComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
