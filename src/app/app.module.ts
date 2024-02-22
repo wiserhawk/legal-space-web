@@ -30,6 +30,9 @@ import { NameChangeAffidavitComponent } from './pages/name-change-affidavit/name
 import { AfterMarriageNameChangeAffidavitComponent } from './pages/after-marriage-name-change-affidavit/after-marriage-name-change-affidavit.component';
 import { RevocationPowerOfAttorneyComponent } from './pages/revocation-power-of-attorney/revocation-power-of-attorney.component';
 import { AddressProofAffidavitComponent } from './pages/address-proof-affidavit/address-proof-affidavit.component';
+import { SignatureChangeAffidavitComponent } from './pages/signature-change-affidavit/signature-change-affidavit.component';
+import { DobAffidavitComponent } from './pages/dob-affidavit/dob-affidavit.component';
+import { IncomeProofAffidavitComponent } from './pages/income-proof-affidavit/income-proof-affidavit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -40,6 +43,9 @@ const routes: Routes = [
   {path: 'name-change-affidavit', component: NameChangeAffidavitComponent},
   {path: 'address-proof-affidavit', component: AddressProofAffidavitComponent},
   {path: 'after-marriage-name-change-affidavit', component: AfterMarriageNameChangeAffidavitComponent},
+  {path: 'signature-change-affidavit', component: SignatureChangeAffidavitComponent},
+  {path: 'dob-affidavit', component: DobAffidavitComponent},
+  {path: 'income-proof-affidavit', component: IncomeProofAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
   {path: 'consultation-request', component: ConsultRequestComponent}
@@ -67,6 +73,9 @@ const routes: Routes = [
     AfterMarriageNameChangeAffidavitComponent,
     RevocationPowerOfAttorneyComponent,
     AddressProofAffidavitComponent,
+    SignatureChangeAffidavitComponent,
+    DobAffidavitComponent,
+    IncomeProofAffidavitComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
