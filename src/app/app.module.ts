@@ -33,6 +33,8 @@ import { AddressProofAffidavitComponent } from './pages/address-proof-affidavit/
 import { SignatureChangeAffidavitComponent } from './pages/signature-change-affidavit/signature-change-affidavit.component';
 import { DobAffidavitComponent } from './pages/dob-affidavit/dob-affidavit.component';
 import { IncomeProofAffidavitComponent } from './pages/income-proof-affidavit/income-proof-affidavit.component';
+import { GasPipelineConnectionAffidavitComponent } from './pages/gas-pipeline-connection-affidavit/gas-pipeline-connection-affidavit.component';
+import { GasConnectionAffidavitComponent } from './pages/gas-connection-affidavit/gas-connection-affidavit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -46,6 +48,8 @@ const routes: Routes = [
   {path: 'signature-change-affidavit', component: SignatureChangeAffidavitComponent},
   {path: 'dob-affidavit', component: DobAffidavitComponent},
   {path: 'income-proof-affidavit', component: IncomeProofAffidavitComponent},
+  {path: 'gas-pipeline-connection-affidavit', component: GasPipelineConnectionAffidavitComponent},
+  {path: 'gas-connection-affidavit', component: GasConnectionAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
   {path: 'consultation-request', component: ConsultRequestComponent}
@@ -76,6 +80,8 @@ const routes: Routes = [
     SignatureChangeAffidavitComponent,
     DobAffidavitComponent,
     IncomeProofAffidavitComponent,
+    GasPipelineConnectionAffidavitComponent,
+    GasConnectionAffidavitComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

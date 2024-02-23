@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
-  selector: 'dob-affidavit',
-  templateUrl: './dob-affidavit.component.html',
-  styleUrls: ['./dob-affidavit.component.css']
+  selector: 'gas-pipeline-connection-affidavit',
+  templateUrl: './gas-pipeline-connection-affidavit.component.html',
+  styleUrls: ['./gas-pipeline-connection-affidavit.component.css']
 })
-export class DobAffidavitComponent {
-
+export class GasPipelineConnectionAffidavitComponent {
 
   model: any = {};
   public error: boolean = false;
@@ -72,14 +71,15 @@ export class DobAffidavitComponent {
     return {
       applicantName: this.model.applicantName,
       fatherName: this.model.fatherName,
-      gender: this.model.gender,
-      dateOfBirth: this.model.dateOfBirth,
-      applicantAddress: this.model.applicantAddress,
+      propertyAddress: this.model.propertyAddress,
+      propertyType: this.model.propertyType,
+      RegisteryNumber: this.model.RegisteryNumber,
+      gasDistributor: this.model.gasDistributor,
       yourName: this.model.yourName,
       email: this.model.email,
       phone: this.model.phone,
       deliveryAddress: this.model.deliveryAddress,
     }
   }
-  
+
 }

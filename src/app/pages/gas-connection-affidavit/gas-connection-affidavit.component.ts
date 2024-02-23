@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
-  selector: 'dob-affidavit',
-  templateUrl: './dob-affidavit.component.html',
-  styleUrls: ['./dob-affidavit.component.css']
+  selector: 'gas-connection-affidavit',
+  templateUrl: './gas-connection-affidavit.component.html',
+  styleUrls: ['./gas-connection-affidavit.component.css']
 })
-export class DobAffidavitComponent {
-
+export class GasConnectionAffidavitComponent {
 
   model: any = {};
   public error: boolean = false;
@@ -16,7 +15,7 @@ export class DobAffidavitComponent {
   public errorFields: string[] = [];
 
   public currentStep = 1;
-  private maxStep = 2;
+  private maxStep = 3;
 
   public constructor(private emailService: EmailService) {}
 
@@ -75,6 +74,12 @@ export class DobAffidavitComponent {
       gender: this.model.gender,
       dateOfBirth: this.model.dateOfBirth,
       applicantAddress: this.model.applicantAddress,
+      addressProof: this.model.addressProof,
+      identityProof: this.model.identityProof,
+      rationCardNumber: this.model.rationCardNumber,
+      gasProvider: this.model.gasProvider,
+      distributorName: this.model.distributorName,
+      distributorAddress: this.model.distributorAddress,
       yourName: this.model.yourName,
       email: this.model.email,
       phone: this.model.phone,
