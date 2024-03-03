@@ -41,13 +41,9 @@
                       <div class="error-holder" *ngIf="error && errorFields.includes('reason')"><i class="bi bi-x-circle"></i> Select the reason of making power of attorney.</div>
 
                     <label class="cont-label">What is the start date of POA?*</label>
-                    <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label> 
-                        <input matInput [matDatepicker]="picker" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="picker"> 
-                          </mat-datepicker-toggle>  
-                        <mat-datepicker #picker></mat-datepicker> 
-                    </mat-form-field>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="startDate" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel" />
+                    </div>
                     <div class="error-holder" *ngIf="error && errorFields.includes('startDate')"><i class="bi bi-x-circle"></i> Select the start date of POA.</div>
                     
                     <label class="cont-label">What is the place of registration this POA?</label>

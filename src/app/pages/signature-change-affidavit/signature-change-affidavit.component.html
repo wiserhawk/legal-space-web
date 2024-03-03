@@ -29,13 +29,9 @@
                     </div>
                     
                     <label class="cont-label">What is your date of birth?</label>
-                        <mat-form-field appearance="fill"> 
-                            <mat-label>(MM/DD/YYYY)</mat-label>
-                            <input matInput [matDatepicker]="picker" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel"> 
-                            <mat-datepicker-toggle matSuffix [for]="picker"> 
-                              </mat-datepicker-toggle>  
-                            <mat-datepicker #picker></mat-datepicker> 
-                        </mat-form-field>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel" />
+                    </div>
 
                     <div class="form-floating">
                         <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="applicantAddress" name="applicantAddress" [(ngModel)]="model.applicantAddress" #applicantAddress="ngModel"></textarea>

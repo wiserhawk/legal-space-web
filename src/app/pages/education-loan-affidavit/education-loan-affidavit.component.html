@@ -1,4 +1,4 @@
-<page-title [title]="'NEW GAS CONNECTION AFFIDAVIT (Annexure-A)'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<page-title [title]="'EDUCATION LOAN AFFIDAVIT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
 <div class="wizard-panel">
     <div class="wiz-container">
         <form name="form"  #f="ngForm" >
@@ -19,15 +19,15 @@
                         <label for="floatingInput">Father's Name</label>
                     </div>
                     
-                    <label class="cont-label">What is your gender?*</label>
+                    <label class="cont-label">What is the gender?</label>
                     <div class="form-floating mb-3">
                         <mat-chip-listbox aria-label="gender" name="gender" [(ngModel)]="model.gender" #gender="ngModel">
-                            <mat-chip-option color="primary">Male</mat-chip-option>
+                            <mat-chip-option selected>Male</mat-chip-option>
                             <mat-chip-option color="warn">Female</mat-chip-option>
                         </mat-chip-listbox>
                     </div>
                     
-                    <label class="cont-label">What is your date of birth?</label>
+                    <label class="cont-label">What is the date of birth?</label>
                     <div class="form-floating mb-3">
                         <input type="date" class="datepicker" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel" />
                     </div>
@@ -37,28 +37,30 @@
                         <label for="floatingTextarea2">Address</label>
                     </div> 
 
-                    <label class="cont-label">What is the document to proof address?</label>
-                    <mat-chip-listbox aria-label="addressProof" name="addressProof" [(ngModel)]="model.addressProof" #addressProof="ngModel" >
-                        <mat-chip-option selected>Rent Agreement</mat-chip-option>
-                        <mat-chip-option color="warn">Aadhaar Card</mat-chip-option>
-                        <mat-chip-option color="accent">Electricity Bill</mat-chip-option>
-                        <mat-chip-option color="primary">Passport</mat-chip-option>
-                        <mat-chip-option color="warn">Other</mat-chip-option>
-                    </mat-chip-listbox>
-
-                    <label class="cont-label">What is the document to proof identity?</label>
+                    <label class="cont-label">Details of the course</label>
                     <div class="form-floating mb-3">
-                    <mat-chip-listbox aria-label="identityProof" name="identityProof" [(ngModel)]="model.identityProof" #identityProof="ngModel" >
-                        <mat-chip-option color="warn">Aadhaar Card</mat-chip-option>
-                        <mat-chip-option color="accent">Voter Card</mat-chip-option>
-                        <mat-chip-option color="primary">Passport</mat-chip-option>
-                        <mat-chip-option color="warn">Other</mat-chip-option>
-                    </mat-chip-listbox>
+                        <input type="text" class="form-control" id="floatingInput" placeholder="courseName" name="courseName" [(ngModel)]="model.courseName" #courseName="ngModel"/>
+                        <label for="floatingInput">Course Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="rationCardNumber" name="rationCardNumber" [(ngModel)]="model.rationCardNumber" #rationCardNumber="ngModel"/>
-                        <label for="floatingInput">Ration Card Number (If Any)</label>
+                        <input type="text" class="form-control" id="floatingInput" placeholder="universityName" name="universityName" [(ngModel)]="model.universityName" #universityName="ngModel"/>
+                        <label for="floatingInput">Name of the University</label>
+                    </div> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="courseDuration" name="courseDuration" [(ngModel)]="model.courseDuration" #courseDuration="ngModel"/>
+                        <label for="floatingInput">Course Duration (In Years)</label>
+                    </div>
+
+                    <label class="cont-label">What is the course begin date?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="courseBeginDate" name="courseBeginDate" [(ngModel)]="model.courseBeginDate" #courseBeginDate="ngModel" />
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="annualFamilyIncome" name="annualFamilyIncome" [(ngModel)]="model.annualFamilyIncome" #annualFamilyIncome="ngModel"/>
+                        <label for="floatingInput">Annual Family Income</label>
                     </div>
                     
                     <div class="nav-btns-holder">
@@ -68,42 +70,10 @@
 
                 <!--Second Step-->
                 <div class="wiz-step-header">
-                    <span class="wiz-step-lbl">2</span><label> Gas Provider & Distributor Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                    <span class="wiz-step-lbl">2</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
                 </div>
                 
                 <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
-
-                    <label class="cont-label">Who is the gas provider company?</label>
-                    <div class="form-floating mb-3">
-                        <mat-chip-listbox aria-label="gasProvider" name="gasProvider" [(ngModel)]="model.gasProvider" #gasProvider="ngModel">
-                            <mat-chip-option color="primary">Indane</mat-chip-option>
-                            <mat-chip-option color="warn">Bharat Gas</mat-chip-option>
-                            <mat-chip-option color="accent">Hindustan Petroleum</mat-chip-option>
-                        </mat-chip-listbox>
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="distributorName" name="distributorName" [(ngModel)]="model.distributorName" #distributorName="ngModel"/>
-                        <label for="floatingInput">Distributor Name</label>
-                    </div>
-                    
-                    <div class="form-floating">
-                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="distributorAddress" name="distributorAddress" [(ngModel)]="model.distributorAddress" #distributorAddress="ngModel"></textarea>
-                        <label for="floatingTextarea2">Distributor Address</label>
-                    </div>
-
-                    <div class="nav-btns-holder">
-                        <button class="nav-btn" (click)="back()">Back</button>
-                        <button class="nav-btn" (click)="next()">Next</button>
-                    </div>
-                </div>
-
-                <!--Third Step-->
-                <div class="wiz-step-header">
-                    <span class="wiz-step-lbl">3</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 3"></i>
-                </div>
-                
-                <div class="wiz-step-component-holder" id="wiz-step-3" *ngIf="currentStep == 3"> 
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>

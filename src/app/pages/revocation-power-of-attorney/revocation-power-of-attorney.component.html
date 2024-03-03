@@ -10,13 +10,9 @@
                 <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
 
                     <label class="cont-label">What would be the date to revoke the Power of Attorney?</label>
-                    <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label> 
-                        <input matInput [matDatepicker]="dateToRevoke" name="dateToRevokePOA" [(ngModel)]="model.dateToRevokePOA" #dateToRevokePOA="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="dateToRevoke"> 
-                          </mat-datepicker-toggle>  
-                        <mat-datepicker #dateToRevoke></mat-datepicker> 
-                    </mat-form-field>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateToRevokePOA" name="dateToRevokePOA" [(ngModel)]="model.dateToRevokePOA" #dateToRevokePOA="ngModel" />
+                    </div>
                     <!-- <div class="error-holder" *ngIf="error && errorFields.includes('dateToRevokePOA')"><i class="bi bi-x-circle"></i> Select the date to revoke the POA.</div> -->
 
                     <label class="cont-label">What was the purpose of POA?</label>
@@ -50,14 +46,10 @@
                         <mat-chip-option color="warn">No</mat-chip-option>
                     </mat-chip-listbox>
 
-                    <label class="cont-label">What was the start date of POA?*</label>
-                    <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label> 
-                        <input matInput [matDatepicker]="startDateOfPOA" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="startDateOfPOA"> 
-                          </mat-datepicker-toggle>  
-                        <mat-datepicker #startDateOfPOA></mat-datepicker> 
-                    </mat-form-field>
+                    <label class="cont-label">What was the start date of POA?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="startDate" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel" />
+                    </div>
                     <!-- <div class="error-holder" *ngIf="error && errorFields.includes('startDate')"><i class="bi bi-x-circle"></i> Select the start date of POA.</div> -->
                     
                     <div class="form-floating mb-3">

@@ -38,6 +38,7 @@ import { GasConnectionAffidavitComponent } from './pages/gas-connection-affidavi
 import { MarriageRegistrationAffidavitComponent } from './pages/marriage-registration-affidavit/marriage-registration-affidavit.component';
 import { DomicileAffidavitComponent } from './pages/domicile-affidavit/domicile-affidavit.component';
 import { FirstChildAffidavitComponent } from './pages/first-child-affidavit/first-child-affidavit.component';
+import { EducationLoanAffidavitComponent } from './pages/education-loan-affidavit/education-loan-affidavit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -56,6 +57,7 @@ const routes: Routes = [
   {path: 'marriage-registration-affidavit', component: MarriageRegistrationAffidavitComponent},
   {path: 'domicile-affidavit', component: DomicileAffidavitComponent},
   {path: 'first-child-affidavit', component: FirstChildAffidavitComponent},
+  {path: 'education-load-affidavit', component: EducationLoanAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
   {path: 'consultation-request', component: ConsultRequestComponent}
@@ -91,6 +93,7 @@ const routes: Routes = [
     MarriageRegistrationAffidavitComponent,
     DomicileAffidavitComponent,
     FirstChildAffidavitComponent,
+    EducationLoanAffidavitComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

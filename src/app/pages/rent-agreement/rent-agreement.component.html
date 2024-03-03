@@ -9,7 +9,7 @@
                 </div>
                 <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
 
-                    <label class="cont-label">What is type of rental property ?</label>
+                    <label class="cont-label">What is type of rental property?</label>
                     <mat-chip-listbox aria-label="rentalType" name="rentalType" [(ngModel)]="model.rentalType" #rentalType="ngModel" >
                         <mat-chip-option selected>Residential Property</mat-chip-option>
                         <mat-chip-option color="warn">Commercial Property</mat-chip-option>
@@ -23,7 +23,7 @@
                       </mat-chip-listbox>
                       <div class="error-holder" *ngIf="error && errorFields.includes('durationType')"><i class="bi bi-x-circle"></i> Select type of agreement duration.</div>
                     
-                    <label class="cont-label">What is type of property ?</label>
+                    <label class="cont-label">What is type of property?</label>
                     <mat-chip-listbox aria-label="propertyType" name="propertyType" [(ngModel)]="model.propertyType" #propertyType="ngModel">
                         <mat-chip-option selected>House</mat-chip-option>
                         <mat-chip-option color="warn">Appartment</mat-chip-option>
@@ -31,7 +31,7 @@
                       </mat-chip-listbox>
                       <div class="error-holder" *ngIf="error && errorFields.includes('propertyType')"><i class="bi bi-x-circle"></i> Select type of property.</div>
             
-                    <label class="cont-label">Who are you ?</label>
+                    <label class="cont-label">Who are you?</label>
                     <mat-chip-listbox aria-label="whoAreYou" name="whoAreYou" [(ngModel)]="model.whoAreYou" #whoAreYou="ngModel">
                         <mat-chip-option selected>Landlord</mat-chip-option>
                         <mat-chip-option color="warn">Tenant</mat-chip-option>
@@ -39,17 +39,13 @@
                       </mat-chip-listbox>
                       <div class="error-holder" *ngIf="error && errorFields.includes('whoAreYou')"><i class="bi bi-x-circle"></i> Select who are you.</div>
 
-                    <label class="cont-label">What is start date of agreement ?</label>
-                    <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label> 
-                        <input matInput [matDatepicker]="picker" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="picker"> 
-                          </mat-datepicker-toggle>  
-                        <mat-datepicker #picker></mat-datepicker> 
-                    </mat-form-field>
+                    <label class="cont-label">What is start date of agreement?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="startDate" name="startDate" [(ngModel)]="model.startDate" #startDate="ngModel" />
+                    </div>
                     <div class="error-holder" *ngIf="error && errorFields.includes('startDate')"><i class="bi bi-x-circle"></i> Select date of agreement.</div>
                     
-                    <label class="cont-label">What is duration of agreement ?</label>
+                    <label class="cont-label">What is duration of agreement?</label>
                     <div class="form-floating mb-3">
                         <input type="number" class="form-control" id="floatingInput" min="1" placeholder="duration" name="duration" [(ngModel)]="model.duration" #name="ngModel" />
                         <label for="floatingInput">Duration (Months)*</label>

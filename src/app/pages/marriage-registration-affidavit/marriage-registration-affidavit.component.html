@@ -21,15 +21,8 @@
                     
                     <label class="cont-label">What is the date of birth?</label>
                     <div class="form-floating mb-3">
-                    <input type="date" class="datepicker" id="maleApplicantDateOfBirth" name="maleApplicantDateOfBirth" [(ngModel)]="model.maleApplicantDateOfBirth" #maleApplicantDateOfBirth="ngModel" />
+                        <input type="date" class="datepicker" id="maleApplicantDateOfBirth" name="maleApplicantDateOfBirth" [(ngModel)]="model.maleApplicantDateOfBirth" #maleApplicantDateOfBirth="ngModel" />
                     </div>
-                    <!-- <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label>
-                        <input matInput [matDatepicker]="picker" ng-model-options="{timezone: 'Asia/Kolkata'}"  name="maleApplicantDateOfBirth" [(ngModel)]="model.maleApplicantDateOfBirth" #maleApplicantDateOfBirth="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="picker"> 
-                            </mat-datepicker-toggle>  
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field> -->
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="maleApplicantReligion" name="maleApplicantReligion" [(ngModel)]="model.maleApplicantReligion" #maleApplicantReligion="ngModel"/>
@@ -86,13 +79,6 @@
                     <div class="form-floating mb-3">
                         <input type="date" class="datepicker" id="femaleApplicantDateOfBirth" name="femaleApplicantDateOfBirth" [(ngModel)]="model.femaleApplicantDateOfBirth" #femaleApplicantDateOfBirth="ngModel" />
                     </div>
-                    <!-- <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label>
-                        <input matInput [matDatepicker]="picker1" name="femaleApplicantDateOfBirth" [(ngModel)]="model.femaleApplicantDateOfBirth" #femaleApplicantDateOfBirth="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="picker1"> 
-                            </mat-datepicker-toggle>  
-                        <mat-datepicker #picker1></mat-datepicker> 
-                    </mat-form-field> -->
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="femaleApplicantReligion" name="femaleApplicantReligion" [(ngModel)]="model.femaleApplicantReligion" #femaleApplicantReligion="ngModel"/>

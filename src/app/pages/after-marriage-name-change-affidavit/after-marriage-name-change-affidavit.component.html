@@ -35,13 +35,9 @@
                     </div>
                     
                     <label class="cont-label">What is your date of birth?*</label>
-                    <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label> 
-                        <input matInput [matDatepicker]="picker" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="picker"> 
-                            </mat-datepicker-toggle>  
-                        <mat-datepicker #picker></mat-datepicker> 
-                    </mat-form-field>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel" />
+                    </div>
                     <div class="error-holder" *ngIf="error && errorFields.includes('dateOfBirth')"><i class="bi bi-x-circle"></i> Select your date of birth.</div>
                     
                     <div class="form-floating mb-3">
@@ -73,13 +69,9 @@
                     </div>
                     
                     <label class="cont-label">What is your date of your marriage?*</label>
-                    <mat-form-field appearance="fill"> 
-                        <mat-label>(MM/DD/YYYY)</mat-label> 
-                        <input matInput [matDatepicker]="marriageDatePicker" name="dateOMarriage" [(ngModel)]="model.dateOMarriage" #dateOMarriage="ngModel"> 
-                        <mat-datepicker-toggle matSuffix [for]="marriageDatePicker"> 
-                            </mat-datepicker-toggle>  
-                        <mat-datepicker #marriageDatePicker></mat-datepicker> 
-                    </mat-form-field>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateOMarriage" name="dateOMarriage" [(ngModel)]="model.dateOMarriage" #dateOMarriage="ngModel" />
+                    </div>
                     <div class="error-holder" *ngIf="error && errorFields.includes('dateOMarriage')"><i class="bi bi-x-circle"></i> Select your date of marriage.</div>
 
                     <label class="cont-label">Do you want to change in Passport?*</label>
