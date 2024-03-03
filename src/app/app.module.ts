@@ -35,6 +35,9 @@ import { DobAffidavitComponent } from './pages/dob-affidavit/dob-affidavit.compo
 import { IncomeProofAffidavitComponent } from './pages/income-proof-affidavit/income-proof-affidavit.component';
 import { GasPipelineConnectionAffidavitComponent } from './pages/gas-pipeline-connection-affidavit/gas-pipeline-connection-affidavit.component';
 import { GasConnectionAffidavitComponent } from './pages/gas-connection-affidavit/gas-connection-affidavit.component';
+import { MarriageRegistrationAffidavitComponent } from './pages/marriage-registration-affidavit/marriage-registration-affidavit.component';
+import { DomicileAffidavitComponent } from './pages/domicile-affidavit/domicile-affidavit.component';
+import { FirstChildAffidavitComponent } from './pages/first-child-affidavit/first-child-affidavit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -50,6 +53,9 @@ const routes: Routes = [
   {path: 'income-proof-affidavit', component: IncomeProofAffidavitComponent},
   {path: 'gas-pipeline-connection-affidavit', component: GasPipelineConnectionAffidavitComponent},
   {path: 'gas-connection-affidavit', component: GasConnectionAffidavitComponent},
+  {path: 'marriage-registration-affidavit', component: MarriageRegistrationAffidavitComponent},
+  {path: 'domicile-affidavit', component: DomicileAffidavitComponent},
+  {path: 'first-child-affidavit', component: FirstChildAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
   {path: 'consultation-request', component: ConsultRequestComponent}
@@ -82,6 +88,9 @@ const routes: Routes = [
     IncomeProofAffidavitComponent,
     GasPipelineConnectionAffidavitComponent,
     GasConnectionAffidavitComponent,
+    MarriageRegistrationAffidavitComponent,
+    DomicileAffidavitComponent,
+    FirstChildAffidavitComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

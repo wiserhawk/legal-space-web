@@ -1,0 +1,111 @@
+<page-title [title]="'DOMICILE AFFIDAVIT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Applicant Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="applicantName" name="applicantName" [(ngModel)]="model.applicantName" #applicantName="ngModel"/>
+                        <label for="floatingInput">Name</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="fatherName" name="fatherName" [(ngModel)]="model.fatherName" #fatherName="ngModel"/>
+                        <label for="floatingInput">Father's Name</label>
+                    </div>
+                    
+                    <label class="cont-label">What is your gender?*</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="gender" name="gender" [(ngModel)]="model.gender" #gender="ngModel">
+                            <mat-chip-option selected>Male</mat-chip-option>
+                            <mat-chip-option color="warn">Female</mat-chip-option>
+                        </mat-chip-listbox>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('gender')"><i class="bi bi-x-circle"></i> Select your gender.</div>
+                    </div>
+                    
+                    <label class="cont-label">What is your date of birth?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel" />
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="purpose" name="purpose" [(ngModel)]="model.purpose" #purpose="ngModel"/>
+                        <label for="floatingInput">Purpose of Domicile</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="nameOfState" name="nameOfState" [(ngModel)]="model.nameOfState" #nameOfState="ngModel"/>
+                        <label for="floatingInput">Name of the State</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="applicantAddress" name="applicantAddress" [(ngModel)]="model.applicantAddress" #applicantAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Address</label>
+                    </div>
+                    
+                    <label class="cont-label">Since how long applicant is resident of the state? (In Years)</label>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="residentSince" name="residentSince" [(ngModel)]="model.residentSince" #residentSince="ngModel"/>
+                        <label for="floatingInput">Resindent Since (In Year)</label>
+                    </div>
+
+                    <label class="cont-label">What is the document to proof address ?</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="document" name="document" [(ngModel)]="model.document" #document="ngModel" >
+                            <mat-chip-option selected>Rent Agreement</mat-chip-option>
+                            <mat-chip-option color="warn">Aadhaar Card</mat-chip-option>
+                            <mat-chip-option color="accent">Electricity Bill</mat-chip-option>
+                            <mat-chip-option color="primary">Passport</mat-chip-option>
+                            <mat-chip-option color="warn">Other</mat-chip-option>
+                        </mat-chip-listbox>
+                    </div>
+                                   
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>
