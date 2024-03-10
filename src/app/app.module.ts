@@ -39,6 +39,8 @@ import { MarriageRegistrationAffidavitComponent } from './pages/marriage-registr
 import { DomicileAffidavitComponent } from './pages/domicile-affidavit/domicile-affidavit.component';
 import { FirstChildAffidavitComponent } from './pages/first-child-affidavit/first-child-affidavit.component';
 import { EducationLoanAffidavitComponent } from './pages/education-loan-affidavit/education-loan-affidavit.component';
+import { EducationalGapAffidavitComponent } from './pages/educational-gap-affidavit/educational-gap-affidavit.component';
+import { DuplicateMarklistAffidavitComponent } from './pages/duplicate-marklist-affidavit/duplicate-marklist-affidavit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -58,6 +60,8 @@ const routes: Routes = [
   {path: 'domicile-affidavit', component: DomicileAffidavitComponent},
   {path: 'first-child-affidavit', component: FirstChildAffidavitComponent},
   {path: 'education-load-affidavit', component: EducationLoanAffidavitComponent},
+  {path: 'educational-gap-affidavit', component: EducationalGapAffidavitComponent},
+  {path: 'duplicate-marklist-affidavit', component: DuplicateMarklistAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
   {path: 'consultation-request', component: ConsultRequestComponent}
@@ -94,6 +98,8 @@ const routes: Routes = [
     DomicileAffidavitComponent,
     FirstChildAffidavitComponent,
     EducationLoanAffidavitComponent,
+    EducationalGapAffidavitComponent,
+    DuplicateMarklistAffidavitComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

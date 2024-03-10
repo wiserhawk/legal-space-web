@@ -69,8 +69,8 @@ export class MarriageRegistrationAffidavitComponent {
 
   private createMessage() {
     return {
-      maleApplicantName: this.model.applicantName,
-      maleApplicantFatherName: this.model.fatherName,
+      maleApplicantName: this.model.maleApplicantName,
+      maleApplicantFatherName: this.model.maleApplicantFatherName,
       maleApplicantDateOfBirth: this.model.maleApplicantDateOfBirth,
       maleApplicantReligion: this.model.maleApplicantReligion,
       maleApplicantOccupation: this.model.maleApplicantOccupation,

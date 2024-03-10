@@ -1,0 +1,170 @@
+<page-title [title]="'DUPLICATE MARKLIST AFFIDAVIT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Applicant Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="applicantName" name="applicantName" [(ngModel)]="model.applicantName" #applicantName="ngModel"/>
+                        <label for="floatingInput">Name</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="fatherName" name="fatherName" [(ngModel)]="model.fatherName" #fatherName="ngModel"/>
+                        <label for="floatingInput">Father's Name</label>
+                    </div>
+                    
+                    <label class="cont-label">What is the date of birth?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth="ngModel" />
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="address" name="address" [(ngModel)]="model.address" #address="ngModel"></textarea>
+                        <label for="floatingTextarea2">Address</label>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Institution Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+
+                    <label class="cont-label">What is the type of institution?</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="institutionType" name="institutionType" [(ngModel)]="model.institutionType" #institutionType="ngModel" >
+                            <mat-chip-option color="primary">School</mat-chip-option>
+                            <mat-chip-option color="warn">College</mat-chip-option>
+                            <mat-chip-option color="accent">University</mat-chip-option>
+                        </mat-chip-listbox>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="certificateName" name="certificateName" [(ngModel)]="model.certificateName" #certificateName="ngModel"/>
+                        <label for="floatingInput">Name of Lost Certificate</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="instituteName" name="instituteName" [(ngModel)]="model.instituteName" #instituteName="ngModel"/>
+                        <label for="floatingInput">Name of Institute</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="instituteRegistrationNumber" name="instituteRegistrationNumber" [(ngModel)]="model.instituteRegistrationNumber" #instituteRegistrationNumber="ngModel"/>
+                        <label for="floatingInput">Institution Registration Number</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="courseName" name="courseName" [(ngModel)]="model.courseName" #courseName="ngModel"/>
+                        <label for="floatingInput">Standard / Department / Branch</label>
+                    </div>
+                    
+                    <label class="cont-label">What is the start date of course?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="courseStartDate" name="courseStartDate" [(ngModel)]="model.courseStartDate" #courseStartDate="ngModel" />
+                    </div>
+
+                    <label class="cont-label">What is the end date of course?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="courseEndDate" name="courseEndDate" [(ngModel)]="model.courseEndDate" #courseEndDate="ngModel" />
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nameOfBoard" placeholder="nameOfBoard" name="nameOfBoard" [(ngModel)]="model.nameOfBoard" #nameOfBoard="ngModel"/>
+                        <label for="floatingInput">Name of Board</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="monthYearPassout" placeholder="monthYearPassout" name="monthYearPassout" [(ngModel)]="model.monthYearPassout" #monthYearPassout="ngModel"/>
+                        <label for="floatingInput">Month & Year of Passing out</label>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Third Step-->
+                 <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">3</span><label> Complaint Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 3"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-3" *ngIf="currentStep == 3"> 
+
+                    <label class="cont-label">What is the date of losing the certificate?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="certificateLosingDate" name="certificateLosingDate" [(ngModel)]="model.certificateLosingDate" #certificateLosingDate="ngModel" />
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="reasonOfLost" name="reasonOfLost" [(ngModel)]="model.reasonOfLost" #reasonOfLost="ngModel"></textarea>
+                        <label for="floatingTextarea2">How does certificate lost?</label>
+                    </div>
+
+                    <label class="cont-label">What is the date of filing police complaint?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="dateOfFIR" name="dateOfFIR" [(ngModel)]="model.dateOfFIR" #dateOfFIR="ngModel" />
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="placeOfFIR" name="placeOfFIR" [(ngModel)]="model.placeOfFIR" #placeOfFIR="ngModel"/>
+                        <label for="floatingInput">Where was the Police Complaint Filed?</label>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Fourth Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">4</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 4"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-4" *ngIf="currentStep == 4"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>
