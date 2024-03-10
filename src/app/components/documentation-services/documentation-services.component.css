@@ -1,10 +1,10 @@
 .documentation-serivces-container {
-    margin-top: 1em;
-    width: 100%;
-    height: auto;
-    background-color: #FFFFFF;
-    padding: 1em;
-    float: left;
+  margin-top: 1em;
+  width: 100%;
+  height: auto;
+  background-color: #FFFFFF;
+  padding: 1em;
+  float: left;
 }
 
 .box {
@@ -30,7 +30,7 @@
   text-align: center;
   color: #fff;
   font-size: 1.1em;
-  font-weight: bolder;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -51,23 +51,24 @@
 }
 
 .links-container {
-width: 100%;
-height: auto;
-padding: .8em 1em;
-text-align: center;
+  width: 100%;
+  height: auto;
+  padding: .8em 1em;
+  text-align: center;
 }
 
 .button {
-margin: 5px;
-padding: 5px 10px;
-border: none; 
-border-radius: 30em;
-background-color: #FFFFFF;
+  margin: 5px;
+  padding: 5px 10px;
+  border: none; 
+  border-radius: 30em;
+  background-color: #ffffff95;
 }
 
 .button a {
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .button-1 a { color: #c38938;}
@@ -79,4 +80,4 @@ background-color: #FFFFFF;
 .button-7 a { color: #3485b1; }
 .button-8 a { color: #be3f08; }
 
-.button:hover { background-color: #DDDDDD }
+.button:hover { background-color: #FFFFFF }

@@ -57,13 +57,13 @@ button:hover {
 	float: left;
 }
 
-.section-header div {
+.header-text {
 	width: 100%;
 	height: auto;
-    padding: 1em 0;
+    padding: 1.2em 0;
     color: #fff;
 	font-size: 1.5em;
-	text-align: center;
+	text-align: center; 
 }
 
 
