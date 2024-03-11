@@ -1,1 +1,65 @@
-<p>other-affidavit works!</p>
+<page-title [title]="'REQUEST ANY TYPE OF AFFIDAVIT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Affidavit Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="affidavitName" name="affidavitName" [(ngModel)]="model.affidavitName" #affidavitName="ngModel"/>
+                        <label for="floatingInput">Name of Affidavit</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="affidavitDetails" name="affidavitDetails" [(ngModel)]="model.affidavitDetails" #affidavitDetails="ngModel"></textarea>
+                        <label for="floatingInput">Affidavit Details</label>
+                    </div>
+                    
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="next()">Next</button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()">Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>

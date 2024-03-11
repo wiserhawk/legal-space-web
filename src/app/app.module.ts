@@ -63,6 +63,7 @@ const routes: Routes = [
   {path: 'documentation/education-load-affidavit', component: EducationLoanAffidavitComponent},
   {path: 'documentation/educational-gap-affidavit', component: EducationalGapAffidavitComponent},
   {path: 'documentation/duplicate-marklist-affidavit', component: DuplicateMarklistAffidavitComponent},
+  {path: 'documentation/other-affidavit', component: OtherAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
   {path: 'blog/:name', component: BlogComponent},
   {path: 'consultation-request', component: ConsultRequestComponent}
