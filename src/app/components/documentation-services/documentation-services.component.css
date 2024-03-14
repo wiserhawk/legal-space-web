@@ -1,16 +1,16 @@
 .documentation-serivces-container {
-  margin-top: 1em;
+  margin: 0 auto;
   width: 100%;
+  max-width: 90em;
   height: auto;
-  background-color: #FFFFFF;
   padding: 1em;
-  float: left;
+  display: flexbox;
 }
 
 .box {
   margin: 1em;
-  width: 15em;
-  height: 22em;
+  width: 20em;
+  height: 25em;
   float: left;
   border-radius: 10px;
 }

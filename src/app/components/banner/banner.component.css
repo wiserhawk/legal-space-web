@@ -1,8 +1,8 @@
 .main-banner {
     width: 100%;
-    height: 40em;
+    height: 100%;
     background: url("../../../assets/images/mountains.jpg") repeat center;
-    position: relative;
+    #position: relative;
 }
 
 .main-banner video {
@@ -26,7 +26,7 @@
   }
 
 .color-1 { color: #fd0069; }
-.color-2 { color: #04cbe6; }
+.color-2 { color: #03b0c7; }
 .color-3 { color: #e68804; }
 
 .text-panel {

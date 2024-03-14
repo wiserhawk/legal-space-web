@@ -15,8 +15,9 @@
             <label for="floatingInput">Email*</label>
             <div class="error-holder" *ngIf="errEmail"><i class="bi bi-x-circle"></i> {{errMsgEmail}}</div>
         </div>
+        
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingPassword" placeholder="message" maxlength="2000" name="message" [(ngModel)]="model.message" #message="ngModel"/>
+            <textarea class="form-control" placeholder="" id="floatingTextarea2"  maxlength="2000" style="height: 100px" placeholder="message" name="message" [(ngModel)]="model.message" #message="ngModel"></textarea>
             <label for="floatingPassword">Message*</label>
             <div class="error-holder" *ngIf="errMessage"><i class="bi bi-x-circle"></i> {{errMsgMessage}}</div>
         </div>

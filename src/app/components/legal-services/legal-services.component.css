@@ -1,0 +1,94 @@
+.legal-serivces-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 90em;
+    height: auto;
+    padding: 1em;
+    display: flexbox;
+    #float: left;
+  }
+  
+  .box {
+    margin: 1em;
+    width: 20em;
+    height: 28em;
+    float: left;
+    border-radius: 10px;
+    
+  }
+  
+  .criminal-laws { background-color: #f89a45; background: url(../../../assets/legal-services-images/criminal-laws.png) bottom no-repeat #f89a45; background-size: contain;}
+  .family-laws { background-color: #e87161; background: url(../../../assets/legal-services-images/family-laws.png) bottom no-repeat #e87161; background-size: contain;}
+  .property-laws { background-color: #769094; background: url(../../../assets/legal-services-images/properties-laws.png) bottom no-repeat #769094; background-size: contain;}
+  .contract-laws { background-color: #46b5cf; background: url(../../../assets/legal-services-images/contract-laws.png) bottom no-repeat #46b5cf; background-size: contain;}
+  .backing-financial-laws { background-color: #06a178; background: url(../../../assets/legal-services-images/banking-financal-laws.png) bottom no-repeat #06a178; background-size: contain;}
+  .service-matters { background-color: #be3bb8; background: url(../../../assets/legal-services-images/service-matters.png) bottom no-repeat #be3bb8; background-size: contain;}
+  .cyber-crimes { background-color: #588db8; background: url(../../../assets/legal-services-images/cyber-crimes.png) bottom no-repeat #588db8; background-size: contain;}
+  .ni-acts { background-color: #ea3e39; background: url(../../../assets/legal-services-images/ni-acts.png) bottom no-repeat #ea3e39; background-size: contain;}
+  .bails { background-color: #f89a45; background: url(../../../assets/legal-services-images/bails.png) bottom no-repeat #f89a45; background-size: contain;}
+  .sexual-offences { background-color: #e87161; background: url(../../../assets/legal-services-images/sexual-offences.png) bottom no-repeat #e87161; background-size: contain;}
+  .property-documentations { background-color: #769094; background: url(../../../assets/legal-services-images/property-documentations.png) bottom no-repeat #769094; background-size: contain;}
+  .court-marriage { background-color: #46b5cf; background: url(../../../assets/legal-services-images/court-marriage.png) bottom no-repeat #46b5cf; background-size: contain;}
+  .patent { background-color: #06a178; background: url(../../../assets/legal-services-images/patent-and-copy-right.png) bottom no-repeat #06a178; background-size: contain;}
+  .rti { background-color: #be3bb8; background: url(../../../assets/legal-services-images/rti.png) bottom no-repeat #be3bb8; background-size: contain;}
+  .civil { background-color: #588db8; background: url(../../../assets/legal-services-images/civil.png) bottom no-repeat #588db8; background-size: contain;}
+  .company-registrations { background-color: #ea3e39; background: url(../../../assets/legal-services-images/company-registrations.png) bottom no-repeat #ea3e39; background-size: contain;}
+
+  .box label {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .hr {
+    width: 30%;
+    margin: 0 auto;
+    color: #fff;
+    border: 1px solid;
+    opacity: 1;
+  }
+  
+  .circle {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .links-container {
+    width: 100%;
+    height: auto;
+    padding: .8em 1em;
+    text-align: center;
+  }
+  
+  .button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none; 
+    border-radius: 30em;
+    background-color: #ffffff95;
+  }
+  
+  .button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  
+  .button-1 a { color: #c38938;}
+  .button-2 a { color: #b3584c; }
+  .button-3 a { color: #4e6569; }
+  .button-4 a { color: #377988; }
+  .button-5 a { color: #088665; }
+  .button-6 a { color: #970290; }
+  .button-7 a { color: #3485b1; }
+  .button-8 a { color: #be3f08; }
+  
+  .button:hover { background-color: #FFFFFF }
+  

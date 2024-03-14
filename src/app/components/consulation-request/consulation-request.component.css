@@ -3,7 +3,6 @@
     padding: 20px;
 	width: 100%;
 	height:auto;
-	background: #fff;
 	border-radius: 5px;
 	float: left;
 }
@@ -12,7 +11,7 @@
     width: 30em;
 }
 
-input {
+input, textarea{
 	border: #08acac solid 0.1rem;
 }
 
@@ -70,8 +69,6 @@ label {
 	font-weight: bold;
 	border: none;
 	cursor: pointer;
-	border-radius: 5px;
-	box-shadow: 5px 5px #ddd;
 }
 
 .forgot-pwd-text {

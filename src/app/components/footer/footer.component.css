@@ -3,9 +3,16 @@
 	float:left;
 	width:100%;
 	height:auto;
-	margin-top: 1em; 
 	color:#ddd;
 	font-size: 1.3em;
+}
+
+.content-panel {
+	margin: 0 auto;
+	max-width: 70em;
+	#background-color: #e96a1b;
+	display: flexbox;
+	
 }
 
 a {
@@ -13,7 +20,7 @@ a {
 }
 
 .about_us {
-	padding: 1em 2em;
+	padding: 1.5em;
 	width: 40%;
 	float:left;
 	height: auto;
@@ -36,14 +43,14 @@ a {
 }
 
 .quick_link, .footer_right {
-	width: 25%;
+	width: 30%;
 	float: left;
     height: auto;
 	text-align: left;
 }
 
 .footer_right {
-	width: 35%;
+	width: 30%;
 }
 
 .quick_link h1, .footer_right h1 {

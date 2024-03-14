@@ -8,7 +8,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ServiceOfferingsComponent } from './components/service-offerings/service-offerings.component';
 import { ConsulationRequestComponent } from './components/consulation-request/consulation-request.component';
 import { FormsModule } from '@angular/forms';
 import { BlogComponent } from './pages/blog/blog.component';
@@ -42,6 +41,7 @@ import { EducationLoanAffidavitComponent } from './pages/docmentations/education
 import { EducationalGapAffidavitComponent } from './pages/docmentations/educational-gap-affidavit/educational-gap-affidavit.component';
 import { DuplicateMarklistAffidavitComponent } from './pages/docmentations/duplicate-marklist-affidavit/duplicate-marklist-affidavit.component';
 import { OtherAffidavitComponent } from './pages/docmentations/other-affidavit/other-affidavit.component';
+import { LegalServicesComponent } from './components/legal-services/legal-services.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -76,7 +76,6 @@ const routes: Routes = [
     FooterComponent,
     MenuComponent,
     HomeComponent,
-    ServiceOfferingsComponent,
     ConsulationRequestComponent,
     BlogComponent,
     ConsultRequestComponent,
@@ -103,6 +102,7 @@ const routes: Routes = [
     EducationalGapAffidavitComponent,
     DuplicateMarklistAffidavitComponent,
     OtherAffidavitComponent,
+    LegalServicesComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
