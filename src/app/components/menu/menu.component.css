@@ -23,7 +23,7 @@
 }
 
 .sidenav span {
-    padding-left: 5px;
+    padding-left: 1em;
     width: 100%;
 }
 
@@ -62,7 +62,7 @@
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
+    top: 0.5em;
     right: 25px;
     font-size: 25px;
     font-weight:bold;

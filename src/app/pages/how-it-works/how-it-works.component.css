@@ -1,6 +1,7 @@
 .workflow-section-panel {
+    margin: 0 auto;
+    max-width: 70em;
     width: 100%;
-    padding: 0.1em 3em;
     font-size: 1.4em;
     color: #333;
     background-color: #eee;

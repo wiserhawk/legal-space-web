@@ -10,7 +10,6 @@
 .content-panel {
 	margin: 0 auto;
 	max-width: 70em;
-	#background-color: #e96a1b;
 	display: flexbox;
 	
 }
@@ -57,13 +56,13 @@ a {
 	font-size: 0.9em;	
 	font-weight: bold;
 	color: #ffffff;
-	margin: 30px 30px 20px 40px;
+	margin: 1.5em;
 	text-transform: uppercase;
 }
 
 .hr {
 	width: 6em;
-	margin: 0 0 30px 40px;
+	margin: 0 0 1.5em 1.5em;
 	color: #e96a1b;
 	border: .1rem solid;
 	opacity: 1;
@@ -71,16 +70,15 @@ a {
 
 .list-unstyled {
 	font-size:1em;
-	padding-left: 40px;
+	padding-left: 1.5em;
 	list-style: none;
 }
 
 .list-unstyled li {
-	padding: 5px 0 5px 0;	
+	padding: 0.3em 0;	
 }
 
 .list-unstyled li a {
-	margin:5px;
 	text-decoration: none;
 	cursor:pointer;
 }

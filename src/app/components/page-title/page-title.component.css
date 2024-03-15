@@ -6,8 +6,9 @@
     text-align: center;
 }
 
-.section-header h3 {
+.section-header span {
     color: #08acac;
     font-size: 1.2em;
     font-weight: bolder;
+    max-width: 30em;
 }

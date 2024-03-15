@@ -109,7 +109,6 @@ button:hover {
   .static-txt {
 	color:#fff;
 	font-size: 1.3em;
-	font-family: 'Fira Code', monospace;
 	font-weight: bold;
   }
 
@@ -141,7 +140,6 @@ button:hover {
   }
   .typing-slider {
 	margin: 1em 0 0 0;
-	font-family: Consolas, monospace;
 	font-weight: bold;
 	text-align: center;
 	white-space: nowrap;

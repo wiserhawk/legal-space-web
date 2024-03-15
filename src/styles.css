@@ -3,7 +3,7 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .body{
-    font-family: 'Kanit', sans-serif;
+    font-family: "Exo 2", serif;
 	width: 100%;
 	left: 0;
   	margin: 3em auto;
@@ -14,7 +14,6 @@
 html, body { height: 100%; }
 body { 
 	margin: 0; 
-	font-family: 'Fira Code', monospace;
 }
 
 
@@ -48,7 +47,7 @@ body {
 
 .wiz-step-lbl {
     background-color: #08acac;
-    padding: 0.2em 0.8em;
+    padding: 0.2em 0.6em;
     border-radius: 50%;
     color: #fff;
 }
