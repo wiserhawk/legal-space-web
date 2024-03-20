@@ -2,6 +2,7 @@
     <!-- <page-title [title]=model.title ></page-title> -->
     <div class="blog-content">
         <label class="title">{{model.title}} </label>
+        <hr class="hr"/>
         <p *ngFor="let paragraph of model.content" [innerHTML]="paragraph"></p>
     </div>
 </div>

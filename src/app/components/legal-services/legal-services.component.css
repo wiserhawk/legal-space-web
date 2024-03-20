@@ -4,35 +4,44 @@
     max-width: 90em;
     height: auto;
     padding: 1em;
-    display: flexbox;
+    #display: flexbox;
     #float: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
   }
   
   .box {
-    margin: 1em;
-    width: 20em;
-    height: 28em;
-    float: left;
     border-radius: 10px;
-    
+    background-color: #06a178;
+  }
+
+  .box :hover {
+    cursor: pointer;
   }
   
-  .criminal-laws { background-color: #f89a45; background: url(../../../assets/legal-services-images/criminal-laws.png) bottom no-repeat #f89a45; background-size: contain;}
-  .family-laws { background-color: #e87161; background: url(../../../assets/legal-services-images/family-laws.png) bottom no-repeat #e87161; background-size: contain;}
-  .property-laws { background-color: #769094; background: url(../../../assets/legal-services-images/properties-laws.png) bottom no-repeat #769094; background-size: contain;}
-  .contract-laws { background-color: #46b5cf; background: url(../../../assets/legal-services-images/contract-laws.png) bottom no-repeat #46b5cf; background-size: contain;}
-  .backing-financial-laws { background-color: #06a178; background: url(../../../assets/legal-services-images/banking-financal-laws.png) bottom no-repeat #06a178; background-size: contain;}
-  .service-matters { background-color: #be3bb8; background: url(../../../assets/legal-services-images/service-matters.png) bottom no-repeat #be3bb8; background-size: contain;}
-  .cyber-crimes { background-color: #588db8; background: url(../../../assets/legal-services-images/cyber-crimes.png) bottom no-repeat #588db8; background-size: contain;}
-  .ni-acts { background-color: #ea3e39; background: url(../../../assets/legal-services-images/ni-acts.png) bottom no-repeat #ea3e39; background-size: contain;}
-  .bails { background-color: #f89a45; background: url(../../../assets/legal-services-images/bails.png) bottom no-repeat #f89a45; background-size: contain;}
-  .sexual-offences { background-color: #e87161; background: url(../../../assets/legal-services-images/sexual-offences.png) bottom no-repeat #e87161; background-size: contain;}
-  .property-documentations { background-color: #769094; background: url(../../../assets/legal-services-images/property-documentations.png) bottom no-repeat #769094; background-size: contain;}
-  .court-marriage { background-color: #46b5cf; background: url(../../../assets/legal-services-images/court-marriage.png) bottom no-repeat #46b5cf; background-size: contain;}
-  .patent { background-color: #06a178; background: url(../../../assets/legal-services-images/patent-and-copy-right.png) bottom no-repeat #06a178; background-size: contain;}
-  .rti { background-color: #be3bb8; background: url(../../../assets/legal-services-images/rti.png) bottom no-repeat #be3bb8; background-size: contain;}
-  .civil { background-color: #588db8; background: url(../../../assets/legal-services-images/civil.png) bottom no-repeat #588db8; background-size: contain;}
-  .company-registrations { background-color: #ea3e39; background: url(../../../assets/legal-services-images/company-registrations.png) bottom no-repeat #ea3e39; background-size: contain;}
+  .service-image > img { 
+    width: 100%; 
+    margin: 1em 0 0 0;
+  }
+  
+  .criminal-laws {background-color: #e79231;}
+  .family-laws { background-color: #e87161;}
+  .property-laws { background-color: #769094;}
+  .contract-laws { background-color: #46b5cf;}
+  .backing-financial-laws { background-color: #06a178;}
+  .service-matters { background-color: #be3bb8;}
+  .cyber-crimes { background-color: #588db8;}
+  .ni-acts { background-color: #ea3e39;}
+  .bails { background-color: #f89a45;}
+  .sexual-offences { background-color: #e87161;}
+  .property-documentations { background-color: #769094;}
+  .court-marriage { background-color: #46b5cf;}
+  .patent { background-color: #06a178;}
+  .rti { background-color: #be3bb8;}
+  .civil { background-color: #588db8;}
+  .company-registrations { background-color: #ea3e39;}
 
   .box label {
     width: 100%;

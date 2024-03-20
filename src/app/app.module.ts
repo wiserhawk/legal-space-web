@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ConsultRequestComponent } from './pages/consult-request/consult-request.component';
 import { HowItWorksComponent } from './pages/how-it-works/how-it-works.component';
-import { RentAgreementComponent } from './pages/docmentations/rent-agreement/rent-agreement.component';
+import { RentAgreementComponent } from './components/docmentations/rent-agreement/rent-agreement.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatInputModule } from '@angular/material/input'; 
@@ -22,26 +22,31 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
-import { PowerOfAttorneyComponent } from './pages/docmentations/power-of-attorney/power-of-attorney.component';
+import { PowerOfAttorneyComponent } from './components/docmentations/power-of-attorney/power-of-attorney.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { DocumentationServicesComponent } from './components/documentation-services/documentation-services.component';
-import { NameChangeAffidavitComponent } from './pages/docmentations/name-change-affidavit/name-change-affidavit.component';
-import { AfterMarriageNameChangeAffidavitComponent } from './pages/docmentations/after-marriage-name-change-affidavit/after-marriage-name-change-affidavit.component';
-import { RevocationPowerOfAttorneyComponent } from './pages/docmentations/revocation-power-of-attorney/revocation-power-of-attorney.component';
-import { AddressProofAffidavitComponent } from './pages/docmentations/address-proof-affidavit/address-proof-affidavit.component';
-import { SignatureChangeAffidavitComponent } from './pages/docmentations/signature-change-affidavit/signature-change-affidavit.component';
-import { DobAffidavitComponent } from './pages/docmentations/dob-affidavit/dob-affidavit.component';
-import { IncomeProofAffidavitComponent } from './pages/docmentations/income-proof-affidavit/income-proof-affidavit.component';
-import { GasPipelineConnectionAffidavitComponent } from './pages/docmentations/gas-pipeline-connection-affidavit/gas-pipeline-connection-affidavit.component';
-import { GasConnectionAffidavitComponent } from './pages/docmentations/gas-connection-affidavit/gas-connection-affidavit.component';
-import { MarriageRegistrationAffidavitComponent } from './pages/docmentations/marriage-registration-affidavit/marriage-registration-affidavit.component';
-import { DomicileAffidavitComponent } from './pages/docmentations/domicile-affidavit/domicile-affidavit.component';
-import { FirstChildAffidavitComponent } from './pages/docmentations/first-child-affidavit/first-child-affidavit.component';
-import { EducationLoanAffidavitComponent } from './pages/docmentations/education-loan-affidavit/education-loan-affidavit.component';
-import { EducationalGapAffidavitComponent } from './pages/docmentations/educational-gap-affidavit/educational-gap-affidavit.component';
-import { DuplicateMarklistAffidavitComponent } from './pages/docmentations/duplicate-marklist-affidavit/duplicate-marklist-affidavit.component';
-import { OtherAffidavitComponent } from './pages/docmentations/other-affidavit/other-affidavit.component';
+import { NameChangeAffidavitComponent } from './components/docmentations/name-change-affidavit/name-change-affidavit.component';
+import { AfterMarriageNameChangeAffidavitComponent } from './components/docmentations/after-marriage-name-change-affidavit/after-marriage-name-change-affidavit.component';
+import { RevocationPowerOfAttorneyComponent } from './components/docmentations/revocation-power-of-attorney/revocation-power-of-attorney.component';
+import { AddressProofAffidavitComponent } from './components/docmentations/address-proof-affidavit/address-proof-affidavit.component';
+import { SignatureChangeAffidavitComponent } from './components/docmentations/signature-change-affidavit/signature-change-affidavit.component';
+import { DobAffidavitComponent } from './components/docmentations/dob-affidavit/dob-affidavit.component';
+import { IncomeProofAffidavitComponent } from './components/docmentations/income-proof-affidavit/income-proof-affidavit.component';
+import { GasPipelineConnectionAffidavitComponent } from './components/docmentations/gas-pipeline-connection-affidavit/gas-pipeline-connection-affidavit.component';
+import { GasConnectionAffidavitComponent } from './components/docmentations/gas-connection-affidavit/gas-connection-affidavit.component';
+import { MarriageRegistrationAffidavitComponent } from './components/docmentations/marriage-registration-affidavit/marriage-registration-affidavit.component';
+import { DomicileAffidavitComponent } from './components/docmentations/domicile-affidavit/domicile-affidavit.component';
+import { FirstChildAffidavitComponent } from './components/docmentations/first-child-affidavit/first-child-affidavit.component';
+import { EducationLoanAffidavitComponent } from './components/docmentations/education-loan-affidavit/education-loan-affidavit.component';
+import { EducationalGapAffidavitComponent } from './components/docmentations/educational-gap-affidavit/educational-gap-affidavit.component';
+import { DuplicateMarklistAffidavitComponent } from './components/docmentations/duplicate-marklist-affidavit/duplicate-marklist-affidavit.component';
+import { OtherAffidavitComponent } from './components/docmentations/other-affidavit/other-affidavit.component';
 import { LegalServicesComponent } from './components/legal-services/legal-services.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
+import { DocumentationsComponent } from './pages/documentations/documentations.component';
+import { LegalServicesPageComponent } from './pages/legal-services-page/legal-services-page.component';
+import { DocumentationsBannerComponent } from './components/documentations-banner/documentations-banner.component';
+import { LegalServicesBannerComponent } from './components/legal-services-banner/legal-services-banner.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -65,8 +70,11 @@ const routes: Routes = [
   {path: 'documentation/duplicate-marklist-affidavit', component: DuplicateMarklistAffidavitComponent},
   {path: 'documentation/other-affidavit', component: OtherAffidavitComponent},
   {path: 'how-it-works', component: HowItWorksComponent},
+  {path: 'blogs', component: BlogsComponent},
   {path: 'blog/:name', component: BlogComponent},
-  {path: 'consultation-request', component: ConsultRequestComponent}
+  {path: 'consultation-request', component: ConsultRequestComponent},
+  {path: 'documentations', component: DocumentationsComponent},
+  {path: 'legal-services', component: LegalServicesPageComponent},
 ] 
 
 @NgModule({
@@ -103,9 +111,14 @@ const routes: Routes = [
     DuplicateMarklistAffidavitComponent,
     OtherAffidavitComponent,
     LegalServicesComponent,
+    BlogsComponent,
+    DocumentationsComponent,
+    LegalServicesPageComponent,
+    DocumentationsBannerComponent,
+    LegalServicesBannerComponent,
   ],
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     BrowserModule,
     AppRoutingModule,
     FormsModule,

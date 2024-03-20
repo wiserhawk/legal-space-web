@@ -4,17 +4,19 @@
     width: 100%;
     max-width: 90em;
     color: #333;
-    display: flexbox;
-    #float: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
 }
 
 .b-card {
-    margin: 1em;
-    padding: 1em;
-    float: left;
-    color: #555;
-    width: 20em;
-    height: auto;
+    #margin: 1em;
+    padding: 2em;
+    #float: left;
+    #color: #555;
+    #width: 20em;
+    #height: auto; 
     border-radius: 0.5em;
     background-color: #FFFFFF;
     text-align: justify;

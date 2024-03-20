@@ -1,0 +1,64 @@
+.banner {
+    margin: 0 auto;
+    padding: 3em 0;
+    max-width: 70em;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-gap: 6em;
+    align-items: stretch;
+}
+
+.part{
+    padding: 3em 0;
+}
+
+.banner-title {
+    margin: 2em 0 0 1em;
+    font-size: 2.5em;
+    color: #333;
+    line-height: 1em;
+}
+
+.banner-action {
+    margin: 2em 0 0 1em;
+}
+
+.banner-action button {
+    margin: 0 0 0 1em;
+    background: none;
+    border: 1px solid #333;
+    padding: 1em 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #222;
+    border-radius: 5px;
+}
+
+.banner-desc {
+    margin: 1em auto;
+    padding: 0 0 0 1.5em;
+    font-size: 1.5em;
+    width: auto;
+    line-height: 1em;
+}
+
+.img {
+    width: 100%;
+    padding: 1em;
+    animation: radiusAnimation 5s ease-in-out infinite;
+}
+
+@keyframes radiusAnimation {
+	
+	0% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+	50% {
+		border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+	}
+	100% {
+		border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+	}
+}
+
