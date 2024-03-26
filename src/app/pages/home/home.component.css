@@ -1,6 +1,8 @@
 .banner-container {
 	width: 100%;
-	height: 100%
+	height: 100%;
+	border-radius: 4em;
+	padding-top: 1em;
 }
 
 .main-banner {
@@ -12,6 +14,7 @@
 	min-width: 100%;
 	min-height: 100%;
 	background-color: #46b5cf;
+	border-radius: 4em;
 }
 
 h3 {
@@ -55,8 +58,8 @@ button:hover {
 
 .section-header {
     width: 100%;
-	background-color: #000;
-	padding: 1em;
+	#background-color: #eee;
+	#padding: 1em;
 	float: left;
 	position: static;
 }
@@ -65,37 +68,45 @@ button:hover {
 	width: 100%;
 	height: auto;
     padding: 1.2em 0;
-    color: #fad908;
-	font-size: 1.5em;
+    color: #08acac;
+	font-size: 1.2em;
+    font-weight: bolder;
 	text-align: center; 
 }
 
-.header-text span {
-	border: 0.2rem double #fad908;
-	padding: 0.3em  0.5em;
-}
+.hr {
+    width: 5em;
+    margin: 1em auto 0 auto;
+    color: #08acac;
+    border: 1px solid;
+    opacity: 1;
+  }
 
 .documentations-section, .legal-servcices-section, .blogs-section, .consulation-request-section {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	float: left;
+	border-radius: 4em;
 }
 
 .documentations-section {
-	background-image: linear-gradient(54deg, rgba(255, 131, 122, 0.5), rgba(255, 131, 122, 0) 28%), linear-gradient(241deg, rgba(255, 131, 122, 0.5), rgba(239, 152, 207, 0) 36%);
+	#background-image: linear-gradient(54deg, rgba(255, 131, 122, 0.3), rgba(255, 131, 122, 0) 28%), linear-gradient(241deg, rgba(255, 131, 122, 0.3), rgba(239, 152, 207, 0) 36%);
+	background-color: #efd6d6;
 }
 
 .legal-servcices-section {
-	background-image: linear-gradient(54deg, rgba(255, 131, 122, 0.5), rgba(255, 131, 122, 0) 28%), linear-gradient(241deg, rgba(255, 131, 122, 0.5), rgba(239, 152, 207, 0) 36%);
+	#background-image: linear-gradient(54deg, rgba(255, 131, 122, 0.3), rgba(255, 131, 122, 0) 28%), linear-gradient(241deg, rgba(255, 131, 122, 0.3), rgba(239, 152, 207, 0) 36%);
+	background-color: #c8eede;
 }
 
 .blogs-section {
 	padding: 3em 0;
+	background-color: #e2d6ef;
 }
 
 .consulation-request-section {
 	padding: 3em 0;
-	background-color: #ffdd00;
+	background-color: #dcf0c0;
 }
 
 

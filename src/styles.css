@@ -19,6 +19,14 @@ body {
 
 /* Wizard from CSS Start */
 
+.hr {
+    width: 8em;
+    margin: 0 auto 1em auto;
+    color: #08acac;
+    border: 1px solid;
+    opacity: 1;
+  }
+
 .wizard-panel {
     width: 100%;
     height: auto;

@@ -1,4 +1,5 @@
 <page-title [title]="'GENERAL POWER OF ATTORNEY'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<hr class="hr">
 <div class="wizard-panel">
     <div class="wiz-container">
         <form name="form"  #f="ngForm" >
@@ -53,7 +54,7 @@
                     </div>
                     
                     <div class="nav-btns-holder">
-                        <button class="nav-btn" (click)="next()">Next</button>
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
                     </div>
                 </div>
 
@@ -101,8 +102,8 @@
                         <div class="error-holder" *ngIf="error && errorFields.includes('principalCountry')"><i class="bi bi-x-circle"></i> Enter country of principal.</div>
                     </div>
                     <div class="nav-btns-holder">
-                        <button class="nav-btn" (click)="back()">Back</button>
-                        <button class="nav-btn" (click)="next()">Next</button>
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
                     </div>
 
                     
@@ -149,8 +150,8 @@
                         <div class="error-holder" *ngIf="error && errorFields.includes('attorneyAddress')"><i class="bi bi-x-circle"></i> Enter attorney's address.</div>
                     </div>
                     <div class="nav-btns-holder">
-                        <button class="nav-btn" (click)="back()">Back</button>  
-                        <button class="nav-btn" (click)="next()">Next</button>
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>  
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
                     </div>
                 </div>
 
@@ -189,8 +190,8 @@
                     </div>
 
                     <div class="nav-btns-holder">
-                        <button class="nav-btn" (click)="back()">Back</button>
-                        <button class="nav-btn" (click)="next()">Next</button>
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
                     </div>
                 </div>
 
@@ -223,8 +224,8 @@
                     </div>
 
                     <div class="nav-btns-holder">
-                        <button class="nav-btn" (click)="back()">Back</button>
-                        <button class="nav-btn" (click)="onSubmit()">Submit</button>
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit <i class="bi bi-caret-up-fill"></i></button>
                     </div>
                 </div>
                 <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>

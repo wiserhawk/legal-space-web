@@ -2,7 +2,7 @@
     margin: 0 auto;
     padding: 3em 0;
     max-width: 70em;
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     grid-gap: 6em;
@@ -10,17 +10,18 @@
 }
 
 .part{
-    padding: 3em 0;
+    align-self: center;
+    padding: 0 1em 0 1em;
 }
 
 .banner-title {
-    margin: 1em 0 0 1em;
+    margin: 0 0 0 1em;
     font-size: 2.5em;
     color: #333;
     line-height: 1em;
 }
 
-.banner-action {
+.banner-action, .how-action {
     margin: 2em 0 0 1em;
 }
 
@@ -35,9 +36,21 @@
     border-radius: 5px;
 }
 
+.how-action a {
+    margin: 0 0 0 1em;
+    color: #333;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.how-action a:hover {
+    color: #08acac;
+}
+
 .banner-desc {
     margin: 1em auto;
-    padding: 0 0 0 1.5em;
+    padding: 0 1em 0 1.5em;
     font-size: 1.5em;
     width: auto;
     line-height: 1em;

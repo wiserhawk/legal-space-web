@@ -1,4 +1,4 @@
-.section-header {
+.page-header {
     margin-top: 4em;
     padding: 2em 0 1em 0;
     width: 100%;
@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.section-header span {
+.page-header span {
     color: #08acac;
     font-size: 1.2em;
     font-weight: bolder;
