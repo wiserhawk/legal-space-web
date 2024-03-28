@@ -16,14 +16,14 @@
   border-radius: 10px;
 }
 
-.box-1 { background-color: #f89a45; }
-.box-2 { background-color: #e87161; }
-.box-3 { background-color: #769094; }
-.box-4 { background-color: #46b5cf; }
-.box-5 { background-color: #06a178; }
-.box-6 { background-color: #be3bb8; }
-.box-7 { background-color: #588db8; }
-.box-8 { background-color: #ea3e39; }
+.box-1 { background-color: #e08e46; }
+.box-2 { background-color: #e06251; }
+.box-3 { background-color: #36bfd7; }
+.box-4 { background-color: #19ca9d; }
+.box-5 { background-color: #1eb1b6; }
+.box-6 { background-color: #d951d2; }
+.box-7 { background-color: #3c93da; }
+.box-8 { background-color: #b6d749; }
 
 .box label {
   width: 100%;

@@ -37,11 +37,14 @@
     padding-left: 0;
 }
 
-.sidenav ul  li {
+.sidenav ul li {
 	margin: 0.3em;
     padding: 0.5em;
     font-size: 1.2em;
+}
 
+.sidenav ul li i {
+    font-size: 1.2em;
 }
 
 .sidenav ul li:hover {

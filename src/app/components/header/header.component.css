@@ -1,7 +1,7 @@
 .header{
 	background:url(../../../assets/images/border.png) repeat-x 0px 0px #FFF;
 	padding: 0.5em 0 0 0;
-	border-bottom: 1px solid rgba(214, 213, 212, 0.64);
+	border-bottom: 1px solid #e9dfd6a3;
 	position: fixed;
 	width: 100%;
     height: 4em;
@@ -10,33 +10,41 @@
 	z-index: 999;
 }
 
-.nav-icon{
+.nav-icon {
+	margin: 0.4em 1em;
 	float: left;
-	padding: 0.8em 0 0.8em 0.8em;
+	padding: 0.3em 0.4em 0.1em 0.4em;
     cursor: pointer;
-    color: #08acac;
+    color: #333;
+	border-radius: 50%;
+	background-color: #f0ecea;
+}
+
+.nav-icon:hover {
+	background-color: #000;
+	color: #fff;
 }
 
 .logo{
 	float:left;
-	padding: 0.3em 0;
+	padding: 0.7em 0;
 }
 .logo img{
 	display:inline-block;
 }
 
 .logo a {
+	padding-left: 0.3em; 
 	text-decoration: none;
-	font-size: 1.5em;
+	font-size: 1.8em;
     font-weight:bolder;
-    color: #08acac;
+    color: #000000;
 }
 .right-top-panel {
 	float: right;
 	margin-right: 0.5em;
 	font-weight: 400;
 	font-size: 1em;
-
 }
 
 .right-top-panel ul li {
@@ -44,5 +52,6 @@
 	float: left;
 	padding: 0.5em;
 	font-size: 1.2em;
+	color: #000;
 }
 
