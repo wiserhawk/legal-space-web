@@ -8,7 +8,7 @@
 	left: 0;
   	margin: 3em auto;
 	background:#eee;
-	color: #555;
+	#color: #555;
 }
 
 html, body { height: 100%; }
@@ -112,7 +112,7 @@ body {
 }
 
 .warn {
-    color: #d3b016;
+    color: #d1ab00;
 }
 
 .datepicker {

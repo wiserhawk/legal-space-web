@@ -11,7 +11,7 @@
                 <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
 
                     <div class="info-box">
-                        <i class="bi bi-info-circle-fill warn" >I am changing my name after my marriage.</i>
+                        <i class="bi bi-info-circle-fill warn" > I am changing my name after my marriage.</i>
                     </div>
         
                     <div class="form-floating mb-3">
@@ -76,11 +76,13 @@
                     <div class="error-holder" *ngIf="error && errorFields.includes('dateOMarriage')"><i class="bi bi-x-circle"></i> Select your date of marriage.</div>
 
                     <label class="cont-label">Do you want to change in Passport?*</label>
-                    <mat-chip-listbox aria-label="nameChangeOnPassport" name="nameChangeOnPassport" [(ngModel)]="model.nameChangeOnPassport" #nameChangeOnPassport="ngModel" >
-                        <mat-chip-option color="primary">Yes (Need to fill Annexure-D)</mat-chip-option>
-                        <mat-chip-option color="warn">No</mat-chip-option>
-                    </mat-chip-listbox>
-                    <div class="error-holder" *ngIf="error && errorFields.includes('nameChangeOnPassport')"><i class="bi bi-x-circle"></i> Select wether you want to change name in passport.</div>                  
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="nameChangeOnPassport" name="nameChangeOnPassport" [(ngModel)]="model.nameChangeOnPassport" #nameChangeOnPassport="ngModel" >
+                            <mat-chip-option color="primary">Yes (Need to fill Annexure-D)</mat-chip-option>
+                            <mat-chip-option color="warn">No</mat-chip-option>
+                        </mat-chip-listbox>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('nameChangeOnPassport')"><i class="bi bi-x-circle"></i> Select wether you want to change name in passport.</div>
+                    </div>
 
                     <div class="nav-btns-holder">
                         <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>

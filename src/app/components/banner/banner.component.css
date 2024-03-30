@@ -3,6 +3,8 @@
     height: 100%;
     background: url("../../../assets/images/mountains.jpg") repeat center;
     border-radius: 4em;
+    display: inline-flex;
+    
 }
 
 .main-banner video {
@@ -17,6 +19,7 @@
     margin: 0 auto;
     width: 25em;
     height: 40em;
+    align-self: center;
     animation: fadeIn 5s;
 }
 
@@ -26,8 +29,8 @@
   }
 
 .color-1 { color: #fd0069; }
-.color-2 { color: #03b0c7; }
-.color-3 { color: #e68804; }
+.color-2 { color: #026b9f; }
+.color-3 { color: #389f01; }
 
 .text-panel {
     width: 100%;
@@ -40,7 +43,7 @@
 }
 
 .text{
-    padding: 4em 0 0 0;
+    padding: 3em 0 0 0;
     text-align: center;
     font-size: 3em;
     line-height: 1em;
@@ -52,7 +55,7 @@ button {
 	border: none;
 	background-color: #FF6766;
 	color: #fff;
-	border-radius: 20em;
+	border-radius: 5em;
     font-size: 1.2em;
 	padding: 1em;
 }
@@ -71,5 +74,5 @@ button:hover {
 }
 
 .btn-1 { background-color: #fd0069; }
-.btn-2 { background-color: #04cbe6; }
-.btn-3 { background-color: #e68804; }
+.btn-2 { background-color: #026b9f; }
+.btn-3 { background-color: #389f01; }

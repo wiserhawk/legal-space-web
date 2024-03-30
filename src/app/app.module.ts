@@ -47,6 +47,7 @@ import { DocumentationsComponent } from './pages/documentations/documentations.c
 import { LegalServicesPageComponent } from './pages/legal-services-page/legal-services-page.component';
 import { DocumentationsBannerComponent } from './components/documentations-banner/documentations-banner.component';
 import { LegalServicesBannerComponent } from './components/legal-services-banner/legal-services-banner.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -75,6 +76,7 @@ const routes: Routes = [
   {path: 'consultation-request', component: ConsultRequestComponent},
   {path: 'documentations', component: DocumentationsComponent},
   {path: 'legal-services', component: LegalServicesPageComponent},
+  {path: 'about-us', component: AboutUsComponent},
 ] 
 
 @NgModule({
@@ -116,6 +118,7 @@ const routes: Routes = [
     LegalServicesPageComponent,
     DocumentationsBannerComponent,
     LegalServicesBannerComponent,
+    AboutUsComponent,
   ],
   imports: [
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),

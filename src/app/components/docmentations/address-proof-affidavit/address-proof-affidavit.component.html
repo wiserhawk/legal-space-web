@@ -1,6 +1,5 @@
 <page-title [title]="'ADDRESS PROOF AFFIDAVIT'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
 <hr class="hr">
-<hr class="hr">
 <div class="wizard-panel">
     <div class="wiz-container">
         <form name="form"  #f="ngForm" >
@@ -21,7 +20,7 @@
                         <label for="floatingInput">Father's Name</label>
                     </div>
                     
-                    <label class="cont-label">What is your gender?*</label>
+                    <label class="cont-label">What is your gender?</label>
                     <div class="form-floating mb-3">
                         <mat-chip-listbox aria-label="gender" name="gender" [(ngModel)]="model.gender" #gender="ngModel">
                             <mat-chip-option selected>Male</mat-chip-option>
