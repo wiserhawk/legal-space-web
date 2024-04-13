@@ -1,0 +1,143 @@
+<page-title [title]="'GIFT DEED'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<hr class="hr">
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Donor Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="donorName" name="donorName" [(ngModel)]="model.donorName" #donorName="ngModel"/>
+                        <label for="floatingInput">Donor Name</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="donorFatherName" name="donorFatherName" [(ngModel)]="model.donorFatherName" #donorFatherName="ngModel"/>
+                        <label for="floatingInput">Father's Name</label>
+                    </div>
+                    
+                    <label class="cont-label">What is the date of birth?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="donorDateOfBirth" name="donorDateOfBirth" [(ngModel)]="model.donorDateOfBirth" #donorDateOfBirth="ngModel" />
+                    </div>
+
+                    <label class="cont-label">Donor's Gender</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="donorGender" name="donorGender" [(ngModel)]="model.donorGender" #donorGender="ngModel">
+                            <mat-chip-option selected>Male</mat-chip-option>
+                            <mat-chip-option color="warn">Female</mat-chip-option>
+                        </mat-chip-listbox>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="donorAddress" name="donorAddress" [(ngModel)]="model.donorAddress" #donorAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Address</label>
+                    </div> 
+
+                    <label class="cont-label">What is the type of property (gift)?</label>
+                    <div class="form-floating mb-3">
+                    <mat-chip-listbox aria-label="propertyType" name="propertyType" [(ngModel)]="model.propertyType" #propertyType="ngModel" >
+                        <mat-chip-option color="primary">Movable Property</mat-chip-option>
+                        <mat-chip-option color="warn">Immovable Property</mat-chip-option>
+                    </mat-chip-listbox>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="placeOfDeed" name="placeOfDeed" [(ngModel)]="model.placeOfDeed" #placeOfDeed="ngModel"/>
+                        <label for="floatingInput">Place of deed</label>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Donee Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="doneeName" name="doneeName" [(ngModel)]="model.doneeName" #doneeName="ngModel"/>
+                        <label for="floatingInput">Donee Name</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="doneeFatherName" name="doneeFatherName" [(ngModel)]="model.doneeFatherName" #doneeFatherName="ngModel"/>
+                        <label for="floatingInput">Father's Name</label>
+                    </div>
+                    
+                    <label class="cont-label">What is the date of birth?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="doneeDateOfBirth" name="doneeDateOfBirth" [(ngModel)]="model.doneeDateOfBirth" #doneeDateOfBirth="ngModel" />
+                    </div>
+
+                    <label class="cont-label">Donee's Gender</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="doneeGender" name="doneeGender" [(ngModel)]="model.doneeGender" #doneeGender="ngModel">
+                            <mat-chip-option selected>Male</mat-chip-option>
+                            <mat-chip-option color="warn">Female</mat-chip-option>
+                        </mat-chip-listbox>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="doneeAddress" name="doneeAddress" [(ngModel)]="model.doneeAddress" #doneeAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Address</label>
+                    </div> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="relationship" name="relationship" [(ngModel)]="model.relationship" #relationship="ngModel"/>
+                        <label for="floatingInput">Relationship of donee with donor</label>
+                    </div>
+                    
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
+                    </div>
+                </div>
+
+                <!--Third Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">3</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 3"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-3" *ngIf="currentStep == 3"> 
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit <i class="bi bi-caret-up-fill"></i></button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+            </div>
+        </form>
+    </div>
+</div>

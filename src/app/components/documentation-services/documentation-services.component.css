@@ -16,6 +16,14 @@
   border-radius: 10px;
 }
 
+.box:hover {
+  letter-spacing: 3px;
+  background: #999;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.8s ease 0s;
+  }
+
 .box-1 { background-color: #e08e46; }
 .box-2 { background-color: #e06251; }
 .box-3 { background-color: #36bfd7; }
@@ -81,4 +89,9 @@
 .button-7 a { color: #3485b1; }
 .button-8 a { color: #be3f08; }
 
-.button:hover { background-color: #FFFFFF }
+.button:hover { 
+    background-color: #FFFFFF;
+    transform: scale(1.1,1.1);
+    transition: all 0.8s ease 0s;
+}
+

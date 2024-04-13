@@ -1,0 +1,98 @@
+<page-title [title]="'SIMPLE WILL'" [icon]="'bi bi-bookmark-star-fill'"></page-title>
+<hr class="hr">
+<div class="wizard-panel">
+    <div class="wiz-container">
+        <form name="form"  #f="ngForm" >
+            <div class="wiz-step">
+                <!--First Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">1</span><label> Testator Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 1"></i>
+                </div>
+                <div class="wiz-step-component-holder" id="wiz-step-1" *ngIf="currentStep == 1">
+                    <div class="info-box">
+                        <i class="bi bi-info-circle-fill warn"> Testator is a person who is making the Will.</i>
+                    </div>
+        
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="testatorName" name="testatorName" [(ngModel)]="model.testatorName" #testatorName="ngModel"/>
+                        <label for="floatingInput">Testator Name</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="testatorFatherName" name="testatorFatherName" [(ngModel)]="model.testatorFatherName" #testatorFatherName="ngModel"/>
+                        <label for="floatingInput">Father's Name</label>
+                    </div>
+                    
+                    <label class="cont-label">What is the date of birth?</label>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="datepicker" id="testatorDateOfBirth" name="testatorDateOfBirth" [(ngModel)]="model.testatorDateOfBirth" #testatorDateOfBirth="ngModel" />
+                    </div>
+
+                    <label class="cont-label">Testator's Gender</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="testatorGender" name="testatorGender" [(ngModel)]="model.testatorGender" #testatorGender="ngModel">
+                            <mat-chip-option selected>Male</mat-chip-option>
+                            <mat-chip-option color="warn">Female</mat-chip-option>
+                        </mat-chip-listbox>
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="testatorAddress" name="testatorAddress" [(ngModel)]="model.testatorAddress" #testatorAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Address</label>
+                    </div> 
+
+                    <label class="cont-label">Who will be the beneficiaries under the Will?</label>
+                    <div class="form-floating mb-3">
+                        <mat-chip-listbox aria-label="typeOfBeneficiary" name="typeOfBeneficiary" [(ngModel)]="model.typeOfBeneficiary" #typeOfBeneficiary="ngModel">
+                            <mat-chip-option selected>Relatives</mat-chip-option>
+                            <mat-chip-option color="warn">Charitable Organizations</mat-chip-option>
+                            <mat-chip-option color="accent">Both</mat-chip-option>
+                            <mat-chip-option color="primary">Other</mat-chip-option>
+                        </mat-chip-listbox>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                       <button class="nav-btn" (click)="next()">Next <i class="bi bi-caret-right-fill"></i></button>
+                    </div>
+                </div>
+
+                <!--Second Step-->
+                <div class="wiz-step-header">
+                    <span class="wiz-step-lbl">2</span><label> Your Contact Details</label> <i class="bi bi-patch-check-fill" *ngIf="currentStep > 2"></i>
+                </div>
+                
+                <div class="wiz-step-component-holder" id="wiz-step-2" *ngIf="currentStep == 2"> 
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="yourName" name="yourName" [(ngModel)]="model.yourName" #yourName="ngModel"/>
+                        <label for="floatingInput">Your Full Name*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('yourName')"><i class="bi bi-x-circle"></i> Enter your name.</div>                   
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="email" name="email" [(ngModel)]="model.email" #email="ngModel"/>
+                        <label for="floatingInput">Email*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('email')"><i class="bi bi-x-circle"></i> Enter your email.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="phone" maxlength="10"  name="phone" [(ngModel)]="model.phone" #phone="ngModel"/>
+                        <label for="floatingInput">Phone Number*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('phone')"><i class="bi bi-x-circle"></i> Enter your phone number.</div>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control mrgn-btm" placeholder="" id="floatingTextarea2" style="height: 100px" placeholder="deliveryAddress" name="deliveryAddress" [(ngModel)]="model.deliveryAddress" #deliveryAddress="ngModel"></textarea>
+                        <label for="floatingTextarea2">Delivery Address*</label>
+                        <div class="error-holder" *ngIf="error && errorFields.includes('deliveryAddress')"><i class="bi bi-x-circle"></i> Enter your delivery address.</div>
+                    </div>
+
+                    <div class="nav-btns-holder">
+                        <button class="nav-btn" (click)="back()"><i class="bi bi-caret-left-fill"></i> Back</button>
+                        <button class="nav-btn" (click)="onSubmit()">Submit <i class="bi bi-caret-up-fill"></i></button>
+                    </div>
+                </div>
+                <div class="success-holder" *ngIf="success"><i class="bi bi-patch-check-fill"></i> Thankyou! Your request has been successfully sumbitted. We will contact you shortly.</div>
+
+                    
+                </div>
+
+        </form>
+    </div>
+</div>

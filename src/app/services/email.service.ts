@@ -14,13 +14,18 @@ export class EmailService {
 
   public async sendEmail(data: any): Promise<any> {
     emailjs.init(this.emailjs_pub_key);
-    var payload = this.stringfyPayload(data);
+    var payload = this.stringify(data);
+    console.log(payload);
     alert(payload);
     //var res = await emailjs.send(this.emailjs_service_id, this.emailjs_template_id, payload);
   }
 
-  private stringfyPayload(data: any): string {
-    return JSON.stringify(data);
+  private stringify(model: any) {
+    var str = "";
+    for (const property in model) {
+      str = str.concat(`${property}: ${model[property]} \n`);
+    }
+    return str;
   }
 
 }
